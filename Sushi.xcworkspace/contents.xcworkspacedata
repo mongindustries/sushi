@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:Core"
+      name = "Temaki">
+      <FileRef
+         location = "group:Core/Core.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Window/Window.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:Renderer"
+      name = "Nigiri">
+      <FileRef
+         location = "group:Renderer/Renderer.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:RendererApp/RendererApp.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:RendererMetal/RendererMetal.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>
