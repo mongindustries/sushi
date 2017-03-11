@@ -56,15 +56,12 @@ open class      Component: Hashable {
 
     open func                   initialise      () {
 
-
     }
 
 
     open func                   rollup          () {
 
-        // default implementation sorts nodes from biggest to smallest
 
-        dataToIterate.sort(by: >)
     }
 
     open func                   teardown        () {

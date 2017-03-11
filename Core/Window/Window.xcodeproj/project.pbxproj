@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		6012A14A1E3E51F20012DDBA /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = 6012A1481E3E51F20012DDBA /* Window.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		608E42931E53547F001E1BDD /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E42921E53547F001E1BDD /* Window.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6012A1451E3E51F20012DDBA /* Window.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Window.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6012A1481E3E51F20012DDBA /* Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
 		6012A1491E3E51F20012DDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		608E42921E53547F001E1BDD /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				6012A1481E3E51F20012DDBA /* Window.h */,
 				6012A1491E3E51F20012DDBA /* Info.plist */,
+				608E42921E53547F001E1BDD /* Window.swift */,
 			);
 			path = Window;
 			sourceTree = "<group>";
@@ -96,6 +99,7 @@
 					6012A1441E3E51F20012DDBA = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = FV49BGP2TT;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				608E42931E53547F001E1BDD /* Window.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +245,7 @@
 		6012A14E1E3E51F20012DDBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FV49BGP2TT;
@@ -249,9 +255,10 @@
 				INFOPLIST_FILE = Window/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ranting.mong.Window;
+				PRODUCT_BUNDLE_IDENTIFIER = ranting.mong.sushi.temaki.window;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -259,6 +266,7 @@
 		6012A14F1E3E51F20012DDBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FV49BGP2TT;
@@ -268,7 +276,7 @@
 				INFOPLIST_FILE = Window/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ranting.mong.Window;
+				PRODUCT_BUNDLE_IDENTIFIER = ranting.mong.sushi.temaki.window;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -294,6 +302,7 @@
 				6012A14F1E3E51F20012DDBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

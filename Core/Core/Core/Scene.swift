@@ -55,6 +55,12 @@ open class Scene {
     }
 
 
+    public func                 removeAllNodes  () {
+
+        
+    }
+
+
     public func                 group           (leader node: Node, followers list: [ Node ]) throws {
 
         if node.isGrouped {
@@ -154,7 +160,7 @@ open class Scene {
 
         if let availableID = availableIDs.first {
 
-            availableIDs.remove(availableID)
+            _ = availableIDs.remove(availableID)
 
             return NodeID(group: 0, index: availableID.nodeIndex)
         }

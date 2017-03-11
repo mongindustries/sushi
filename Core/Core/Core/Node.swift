@@ -49,13 +49,23 @@ open class Node: Hashable, Comparable {
 
     internal(set) public var        nodePriority        = NodeID(0x0000_0000_0000_0000)
 
-    public var                      conformedComponents = [ Component.Type ]()
 
+    public var                      conformedComponents = [ Component.Type ]()
 
 
     public var                      hashValue           : Int {
 
         return Int(nodePriority)
+    }
+
+
+    public var                      label               : String
+
+
+
+    public init                                         (label: String) {
+
+        self.label = label
     }
 
 
@@ -78,6 +88,8 @@ open class Node: Hashable, Comparable {
         }
 
         pcomponent.dataToIterate.append(self)
+
+        pcomponent.dataToIterate.sort(by: >)
 
         conformedComponents.append(component)
 
