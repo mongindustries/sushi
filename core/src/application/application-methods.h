@@ -8,7 +8,7 @@ struct ma_application;
 
 struct te_window;
 
-SU_PSTRONG(struct ma_application)       ma_make_application                 (struct ma_application_driver generator);
+SU_PSTRONG(struct ma_application)       ma_make_application                 (struct ma_application_driver generator, SU_PSTRONG(void) customData);
 
 void                                    ma_kill_application                 (SU_PMUT(struct ma_application) application);
 

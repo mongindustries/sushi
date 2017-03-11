@@ -3,7 +3,7 @@
 #include "matrix.h"
 #include "vector.h"
 
-struct su_matrix44 su_mult_matrix44_from  (struct su_matrix44 rhs);
+struct su_matrix44 su_mult_matrix44_from  (struct su_matrix44 lhs, struct su_matrix44 rhs);
 
 
 struct su_matrix44 su_make_matrix44_ident ();

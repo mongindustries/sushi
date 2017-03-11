@@ -5,11 +5,14 @@
 
 #include <stdlib.h>
 
-SU_PSTRONG(struct ma_application)   ma_make_application                 (struct ma_application_driver generator) {
+SU_PSTRONG(struct ma_application)   ma_make_application                 (struct ma_application_driver generator, SU_PSTRONG(void) customData) {
 
     SU_PSTRONG(struct ma_application) app = (SU_PSTRONG(struct ma_application)) malloc(sizeof(struct ma_application));
 
     app->drivers            = generator;
+    app->customData         = customData;
+
+    generator.initialize(app, customData);
 
     app->device_graphics    = NULL;
     app->device_audio       = NULL;
@@ -25,6 +28,7 @@ void                                ma_kill_application                 (SU_PMUT
     free(application);
     application = NULL;
 }
+
 
 SU_PWEAK(struct te_window)          ma_get_window_from_current_thread   () {
 

@@ -36,7 +36,7 @@ struct ma_application_driver {
     SU_PSTRONG(struct na_input_driver)  input_driver;
 
 
-    void                                (*initialize)       (SU_PREF(struct ma_application) application);
+    void                                (*initialize)       (SU_PREF(struct ma_application) application, SU_PREF(void) customData);
 
     void                                (*destroy)          (SU_PREF(struct ma_application) application);
 };
@@ -45,6 +45,9 @@ struct ma_application_driver {
 struct ma_application {
 
     struct ma_application_driver        drivers;
+
+
+    SU_PSTRONG(void)                    customData;
 
 
     SU_PSTRONG(void)                    device_graphics;
