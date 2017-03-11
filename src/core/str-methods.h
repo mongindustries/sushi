@@ -2,15 +2,21 @@
 
 #include <stdbool.h>
 
-#include "str.h"
 #include "pointer-ownership.h"
 
-struct shi_string   shi_make_string (char* c_string);
+struct su_string; // f-dec
 
-void                shi_kill_string (SHI_PREF(struct shi_string) string);
+SU_PSTRONG(struct su_string)    su_make_string  (char* c_string);
+
+void                            su_kill_string  (SU_PMUT(struct su_string) string);
+
+/*
+    Converts a sushi string into a c string.
+    HAZARD: Usually you don't want to use this, unless necessary.
+ */
+SU_P_HAZARD char*              su_conv_string   (SU_PREF(struct su_string) string);
 
 
-SHI_P_HAZARD char*  shi_conv_string (SHI_PREF(struct shi_string) string);
+SU_PSTRONG(struct su_string)    su_join_string  (SU_PMUT(struct su_string) lhs, SU_PMUT(struct su_string) rhs, bool destroy);
 
-
-struct shi_string   shi_join_string (SHI_PMUT(struct shi_string) lhs, SHI_PMUT(struct shi_string) rhs, bool destroy);
+bool                            su_comp_string  (SU_PREF(struct su_string) lhs, SU_PREF(struct su_string) rhs);

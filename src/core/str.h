@@ -1,11 +1,10 @@
 #pragma once
 
 /**
-
     Sushi string. These are immutable data type that has a UTF-32 backing data.
 
  */
-struct shi_string {
+struct su_string {
 
     unsigned int*   _data;
 
