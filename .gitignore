@@ -5,6 +5,7 @@
 ## Build generated
 build/
 DerivedData/
+[lLib]/
 
 ## Various settings
 *.pbxuser
@@ -65,3 +66,4 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+.vs/
