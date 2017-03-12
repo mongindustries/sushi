@@ -1,9 +1,9 @@
 cmake_minimum_required      (VERSION 3.6)
 project                     (sushi)
 
-add_subdirectory            (../deps/libuv ./deps/libuv)
+add_subdirectory            (../deps/libuv ../build-deps/libuv)
 
-set                         (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib/base)
+set                         (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib/core)
 
 message                     (STATUS "CMAKE_SOURCE_DIR: " ${CMAKE_SOURCE_DIR})
 message                     (STATUS "CMAKE_ARCHIVE_OUTPUT_DIRECTORY: " ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY})

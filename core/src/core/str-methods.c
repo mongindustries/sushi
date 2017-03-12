@@ -45,10 +45,10 @@ void                            su_kill_string (SU_PMUT(struct su_string) string
 
 char*                           su_conv_string (SU_PREF(struct su_string) string) {
 
-    unsigned char*      c_string    = (unsigned char*) calloc(string->_size + 1, sizeof(char));
+    char*           c_string    = (char*) calloc(string->_size + 1, sizeof(char));
 
-    unsigned int        head_idx    = 0;
-    unsigned int        length      = string->_size;
+    unsigned int    head_idx    = 0;
+    unsigned int    length      = string->_size;
 
     while (head_idx < length) {
 
