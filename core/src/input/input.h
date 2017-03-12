@@ -3,6 +3,12 @@
 #include "../core/pointer-ownership.h"
 #include "../core/pointer-attribute.h"
 
+#include <uv.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
 struct te_window;
 struct ma_application;
 
@@ -17,3 +23,7 @@ struct na_input {
 
 
 };
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus

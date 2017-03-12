@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
 typedef float su_scalar1;
 
 struct su_scalar2 {
@@ -22,3 +26,7 @@ struct su_scalar4 {
     float z;
     float w;
 };
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus

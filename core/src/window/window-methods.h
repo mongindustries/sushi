@@ -4,6 +4,10 @@
 #include "../core/str-methods.h"
 #include "../core/pointer-ownership.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
 struct te_window;
 struct ma_application;
 
@@ -18,3 +22,7 @@ void                            te_window_set_title     (SU_PREF(struct te_windo
 
 
 void                            te_window_send_message  (SU_PREF(struct te_window) window, unsigned int message, SU_PREF(void) data);
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus

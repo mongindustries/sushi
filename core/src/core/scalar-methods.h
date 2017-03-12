@@ -2,6 +2,10 @@
 
 #include "scalar.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
 // construction
 
 struct su_scalar2   su_make_scalar2     (float x, float y);
@@ -29,3 +33,7 @@ struct su_scalar4   su_expand3to4       (struct su_scalar3 value);
 // arithmetic
 
 struct su_scalar4   su_multiply4        (struct su_scalar4 lhs, struct su_scalar4 rhs);
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus

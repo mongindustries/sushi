@@ -2,6 +2,10 @@
 
 #include "vector.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
 struct su_rect {
 
     su_vector2 size;
@@ -15,3 +19,7 @@ struct su_rect_edge {
     su_scalar1 right;
     su_scalar1 bottom;
 };
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus

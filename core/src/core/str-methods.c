@@ -4,21 +4,26 @@
 #include <stdlib.h>
 #include <string.h>
 
-SU_PSTRONG(struct su_string)    su_make_string (char* c_string) {
+SU_PSTRONG(struct su_string)    su_make_string (const char* c_string) {
 
     // OBJECTIVE: expand c_string into su_string.
 
     unsigned int        head_idx            = 0;
     unsigned int        length              = (unsigned long) strlen(c_string);
 
-    SU_PSTRONG(struct su_string)  thestring = malloc(sizeof(struct su_string));
+    SU_PSTRONG(struct su_string)  thestring = calloc(1, sizeof(struct su_string));
 
     thestring->_data    = (unsigned int*) calloc(length, sizeof(unsigned int));
 
     thestring->_size    = length;
     thestring->_hash    = 0;
 
-    while (head_idx < length) { thestring->_data[head_idx] = (unsigned int) c_string[head_idx]; head_idx += 1; }
+    while (head_idx < length) {
+
+        thestring->_data[head_idx] = (unsigned int) c_string[head_idx];
+
+        head_idx += 1;
+    }
 
     return thestring;
 }
@@ -40,7 +45,20 @@ void                            su_kill_string (SU_PMUT(struct su_string) string
 
 char*                           su_conv_string (SU_PREF(struct su_string) string) {
 
-    return NULL;
+    unsigned char*      c_string    = (unsigned char*) calloc(string->_size + 1, sizeof(char));
+
+    unsigned int        head_idx    = 0;
+    unsigned int        length      = string->_size;
+
+    while (head_idx < length) {
+
+        c_string[head_idx] = (char)string->_data[head_idx];
+        head_idx += 1;
+    }
+
+    c_string[head_idx] = '\0';
+
+    return  c_string;
 }
 
 

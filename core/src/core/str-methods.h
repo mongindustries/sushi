@@ -4,9 +4,13 @@
 
 #include "pointer-ownership.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
 struct su_string; // f-dec
 
-SU_PSTRONG(struct su_string)    su_make_string  (char* c_string);
+SU_PSTRONG(struct su_string)    su_make_string  (const char* c_string);
 
 void                            su_kill_string  (SU_PMUT(struct su_string) string);
 
@@ -20,3 +24,7 @@ SU_P_HAZARD char*              su_conv_string   (SU_PREF(struct su_string) strin
 SU_PSTRONG(struct su_string)    su_join_string  (SU_PMUT(struct su_string) lhs, SU_PMUT(struct su_string) rhs, bool destroy);
 
 bool                            su_comp_string  (SU_PREF(struct su_string) lhs, SU_PREF(struct su_string) rhs);
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
