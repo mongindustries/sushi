@@ -35,6 +35,5 @@ set                         (SRC_SU_WIND            src/window/window-methods.c
                                                     )
 
 add_library                 (sushi_window           ${SRC_SU_WIND})
-add_dependencies            (sushi_window           uv)
 
 target_include_directories  (sushi_window PUBLIC    src)

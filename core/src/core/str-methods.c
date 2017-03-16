@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-SU_PSTRONG(struct su_string)    su_make_string (const char* c_string) {
+SU_PSTRONG(struct su_string)    su_make_string  (const char* c_string) {
 
     // OBJECTIVE: expand c_string into su_string.
 
@@ -28,7 +28,7 @@ SU_PSTRONG(struct su_string)    su_make_string (const char* c_string) {
     return thestring;
 }
 
-void                            su_kill_string (SU_PMUT(struct su_string) string) {
+void                            su_kill_string  (SU_PMUT(struct su_string) string) {
 
     free(string->_data);
 
@@ -42,8 +42,22 @@ void                            su_kill_string (SU_PMUT(struct su_string) string
     string          = NULL;
 }
 
+SU_PSTRONG(struct su_string)    su_copy_string  (SU_PREF(struct su_string) string) {
 
-char*                           su_conv_string (SU_PREF(struct su_string) string) {
+    SU_PSTRONG(struct su_string) new_string = (SU_PSTRONG(struct su_string)) malloc(sizeof(struct su_string));
+
+    new_string->_size = string->_size;
+    new_string->_data = (unsigned int*) calloc(string->_size, sizeof(unsigned int));
+    new_string->_hash = 0;
+
+    memcpy(new_string->_data, string->_data, string->_size);
+
+    return new_string;
+}
+
+
+
+char*                           su_conv_string  (SU_PREF(struct su_string) string) {
 
     char*           c_string    = (char*) calloc(string->_size + 1, sizeof(char));
 
@@ -62,7 +76,7 @@ char*                           su_conv_string (SU_PREF(struct su_string) string
 }
 
 
-SU_PSTRONG(struct su_string)    su_join_string (SU_PMUT(struct su_string) lhs, SU_PMUT(struct su_string) rhs, bool destroy) {
+SU_PSTRONG(struct su_string)    su_join_string  (SU_PMUT(struct su_string) lhs, SU_PMUT(struct su_string) rhs, bool destroy) {
 
     unsigned int        head_idx                = 0;
     unsigned int        length                  = lhs->_size + rhs->_size;
@@ -86,7 +100,7 @@ SU_PSTRONG(struct su_string)    su_join_string (SU_PMUT(struct su_string) lhs, S
     return new_string;
 }
 
-bool                            su_comp_string (SU_PREF(struct su_string) lhs, SU_PREF(struct su_string) rhs) {
+bool                            su_comp_string  (SU_PREF(struct su_string) lhs, SU_PREF(struct su_string) rhs) {
     
     if (lhs->_size != rhs->_size) { return false; }
 
