@@ -33,10 +33,11 @@ void                            application_initialize          (SU_PREF(struct 
     WNDCLASSEX wcex         = { 0 };
 
     wcex.cbSize             = sizeof(WNDCLASSEX);
+    wcex.cbClsExtra         = sizeof(ApplicationPayload);
+    wcex.cbWndExtra         = 0;
+
     wcex.style              = CS_HREDRAW | CS_VREDRAW;
     wcex.lpfnWndProc        = application_wndProc;
-    wcex.cbClsExtra         = 0;
-    wcex.cbWndExtra         = 0;
     wcex.hInstance          = customData;
     wcex.hIcon              = LoadIcon(customData, MAKEINTRESOURCE(IDI_APPLICATION));
     wcex.hCursor            = LoadCursor(NULL, IDC_ARROW);
@@ -51,6 +52,8 @@ void                            application_initialize          (SU_PREF(struct 
 
         // TODO: throw a fatal error here!
     }
+
+    SetClassLongPtr()
 }
 
 void                            application_destroy             (SU_PREF(struct ma_application) application) {

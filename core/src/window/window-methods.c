@@ -9,18 +9,55 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+void                            window_event            (uv_async_t* handle) {
+
+    SU_PSTRONG(struct te_window_event) event = (SU_PSTRONG(struct te_window_event)) handle->data;
+
+    while (event != NULL) {
+
+        // process event
+
+
+
+        SU_PSTRONG(struct te_window_event) toDelete = event;
+        event = toDelete->toNext;
+
+        free(toDelete);
+        toDelete = NULL;
+    }
+}
+
 void                            window_thread           (void* args) {
 
     SU_PSTRONG(struct te_window) window = (SU_PSTRONG(struct te_window)) args;
 
     uv_loop_init    (&window->threadLoop);
+
+    uv_async_init   (&window->threadLoop, &window->dispatch_windowEvents, window_event);
+
     uv_run          (&window->threadLoop, UV_RUN_DEFAULT);
     uv_loop_close   (&window->threadLoop);
 }
 
 void                            generate_event          (SU_PREF(struct te_window) window, enum te_window_event_messages message, void* param) {
 
+    SU_PSTRONG(struct te_window_event) event = (SU_PSTRONG(struct te_window_event)) malloc(sizeof(struct te_window_event));
 
+    event->ref_window   = window;
+
+    event->event        = message;
+    event->paramLow     = param;
+
+    event->toNext       = NULL;
+
+    if (window->dispatch_windowEvents.data == NULL) {
+
+        window->dispatch_windowEvents.data = event;
+    }
+    else {
+
+        ((SU_PWEAK(struct te_window_event)) window->dispatch_windowEvents.data)->toNext = event;
+    }
 }
 
 
@@ -29,11 +66,13 @@ SU_PSTRONG(struct te_window)    te_make_window          (SU_PREF(struct ma_appli
     SU_PWEAK    (struct te_window_driver)   driver      = application->drivers.window_driver;
     SU_PSTRONG  (struct te_window)          newWindow   = (SU_PSTRONG(struct te_window)) malloc(sizeof(struct te_window));
 
-    newWindow->ref_application  = application;
-    newWindow->driver           = driver;
+    newWindow->ref_application              = application;
+    newWindow->driver                       = driver;
 
-    newWindow->title            = title;
-    newWindow->position         = location;
+    newWindow->title                        = title;
+    newWindow->position                     = location;
+
+    newWindow->dispatch_windowEvents.data   = NULL;
 
     // init libuv thread for this window
 

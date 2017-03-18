@@ -61,12 +61,15 @@ struct te_window_events {
 
 struct te_window_event {
 
+    SU_PWEAK(struct te_window)          ref_window;
+
+
     enum te_window_event_messages       event;
 
     SU_ABSREF void*                     paramLow;
 
 
-    SU_PSTRONG(struct te_widnow_event)  toNext;
+    SU_PSTRONG(struct te_window_event)  toNext;
 };
 
 struct te_window {
