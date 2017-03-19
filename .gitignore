@@ -5,3 +5,6 @@
 
 [lL]ib/
 .vs/
+*.exe
+*.ilk
+*.pdb

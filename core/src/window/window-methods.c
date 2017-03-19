@@ -17,7 +17,17 @@ void                            window_event            (uv_async_t* handle) {
 
         // process event
 
+        switch (event->event) {
 
+        case te_window_event_message_resized:
+            break;
+
+        case te_window_event_message_changeTitle:
+            break;
+
+        case te_window_event_message_activated:
+            break;
+        }
 
         SU_PSTRONG(struct te_window_event) toDelete = event;
         event = toDelete->toNext;

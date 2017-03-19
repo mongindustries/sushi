@@ -3,9 +3,9 @@ project                 (sushi_windows)
 
 add_subdirectory        (../../core ./base)
 
-set                     (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib/)
+set                     (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib/platform-windows/)
 
-include_directories     (src ../../)
+include_directories     (src ../../ ../../deps/libuv/libuv/include)
 
 set                     (SRC_PLATFORM_WIN       src/application/application.c
                                                 src/window/window.c)

@@ -4,8 +4,9 @@ project                 (sushi_app_windows)
 add_subdirectory        (../../platform/windows ./platform)
 
 set                     (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/app/windows)
+set                     (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/out/windows)
 
-include_directories     (src ../../)
+include_directories     (src ../../ ../../deps/libuv/libuv/include)
 
 set                     (SRC_TEST   src/application.cpp
                                     )
