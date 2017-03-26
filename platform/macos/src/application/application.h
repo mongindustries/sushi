@@ -1,3 +1,10 @@
 #include <core/src/application/application.h>
 
-struct ma_application_driver platform_win_create_driver();
+#include <foundation/foundation.h>
+#include <appkit/appkit.h>
+
+struct ma_application_driver platform_mac_create_driver();
+
+@interface AppDelegate: NSObject<NSApplicationDelegate>
+
+@end

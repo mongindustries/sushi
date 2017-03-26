@@ -3,9 +3,9 @@ project                 (sushi_macos)
 
 add_subdirectory        (../../core ./base)
 
-set                     (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/lib/)
+set                     (CMAKE_ARCHIVE_OUTPUT_DIRECTORY ../../out/platform/macos)
 
-include_directories     (src ../../)
+include_directories     (src ../../ ../../deps/libuv/libuv/include)
 
 set                     (SRC_PLATFORM_MAC       src/application/application.m
                                                 )

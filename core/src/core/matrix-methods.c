@@ -1,7 +1,7 @@
 #include "matrix-methods.h"
 #include "scalar-methods.h"
 
-struct su_matrix44  su_mult_matrix44_from   (struct su_matrix44 lhs, struct su_matrix44 rhs) {
+struct su_matrix44 su_mult_matrix44_from    (struct su_matrix44 lhs, struct su_matrix44 rhs) {
 
     struct su_matrix44 mat;
 
@@ -13,7 +13,7 @@ struct su_matrix44  su_mult_matrix44_from   (struct su_matrix44 lhs, struct su_m
     return mat;
 }
 
-struct su_matrix44  su_make_matrix44_ident  () {
+struct su_matrix44 su_make_matrix44_ident   () {
 
     struct su_matrix44 mat;
 
@@ -23,4 +23,13 @@ struct su_matrix44  su_make_matrix44_ident  () {
     mat.elements[3] = su_make_scalar4(0, 0, 0, 1);
 
     return mat;
+}
+
+struct su_matrix44 su_make_matrix44_ortho   () {
+
+    struct su_matrix44 result;
+
+
+
+    return result;
 }

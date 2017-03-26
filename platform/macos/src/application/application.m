@@ -1,20 +1,25 @@
 #import "application.h"
 
-#import <Foundation/Foundation.h>
-#import <AppKit/AppKit.h>
+@implementation AppDelegate
 
-void                            app_initialize              (SU_PREF(struct ma_application) application, SU_PREF(void) customData) {
-
-    NSWindow* theWindow = (__bridge_transfer NSWindow*) customData;
-}
-
-void                            app_destroy                 (SU_PREF(struct ma_application) application) {
-
+- (void)                        applicationDidFinishLaunching:  (NSNotification*) notification {
 
 }
 
+@end
 
-struct ma_application_driver    platform_win_create_driver  () {
+void                            app_initialize                  (SU_PREF(struct ma_application) application, SU_PREF(void) customData) {
+
+    NSApplication* theWindow = (__bridge_transfer NSApplication*) customData;
+}
+
+void                            app_destroy                     (SU_PREF(struct ma_application) application) {
+
+
+}
+
+
+struct ma_application_driver    platform_mac_create_driver      () {
 
     struct ma_application_driver driver;
 

@@ -44,19 +44,30 @@ enum te_window_event_messages {
 
 struct te_window_driver {
 
+    /**
+     * Method used by te_make_window to initialize the window.
+     * Any platform-specific code for initialization should be done here.
+     */
     void                                (*initialize)   (SU_PREF(struct ma_application), SU_PREF(struct te_window));
 
+    /**
+     * Method used by te_kill_window to destroy the window.
+     * Any platform-specific code for destruction should be done here.
+     */
     void                                (*destroy)      (SU_PREF(struct ma_application), SU_PREF(struct te_window));
 
 
-    void                                (*dispatch)     (SU_PREF(struct ma_application), SU_PREF(struct te_window), unsigned int message, SU_PREF(void) data);
+    /**
+     * Method used by te_window to dispatch window events to the application thread.
+     *
+     * @param message The message to dispatch.
+     * @param data The data that the message has.
+     */
+    void                                (*dispatch)     (SU_PREF(struct ma_application), SU_PREF(struct te_window), enum te_window_event_messages message, SU_PREF(void) data);
 };
 
 struct te_window_events {
 
-    void                                (*activated)    (SU_PREF(struct ma_application), SU_PREF(struct te_window), bool value);
-
-    void                                (*resized)      (SU_PREF(struct ma_application), SU_PREF(struct te_window), struct su_scalar2 value);
 };
 
 struct te_window_event {
@@ -91,9 +102,14 @@ struct te_window {
     uv_loop_t                           threadLoop;
 
 
+    uv_async_t                          digest_windowEvents;
+
+    uv_mutex_t                          digest_locker_windowEvents;
+
+
     uv_async_t                          dispatch_windowEvents;
 
-    uv_mutex_t                          locker_windowEvents;
+    uv_mutex_t                          dispatch_locker_windowEvents;
 
 
     SU_PSTRONG(void)                    customData;
