@@ -1,3 +1,0 @@
-[submodule "deps/libuv"]
-	path = deps/libuv
-url=https://gitlab.com/rantingmong/mong-libuv-cmake.git
