@@ -22,7 +22,7 @@
 
 
 #define SU_SYN_PROP(ParentType, Type, Name)     const Type&         ParentType::get_##Name  () const { return Name; } \
-                                                void                ParentType::set_##Name  (const Type& value) { value = Name; }
+                                                void                ParentType::set_##Name  (const Type& value) { Name = value; }
 
 
 #define SU_DEF_PROP_RO(Type, Name)              protected:\

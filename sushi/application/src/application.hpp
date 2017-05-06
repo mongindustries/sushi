@@ -84,6 +84,7 @@ namespace sushi { namespace app {
 
         void                                unbindWindow            (const std::shared_ptr<wnd::window>& window);
 
+    private:
 
         void                                receivedLowMemory       (application *const application) override;
     };

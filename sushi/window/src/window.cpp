@@ -3,8 +3,10 @@
 //
 
 #include "window.hpp"
+#include "windowLogic.hpp"
 
 #include <application/src/application.hpp>
+#include <cassert>
 
 using namespace std;
 
@@ -26,33 +28,52 @@ window::window                                              ():
 }
 
 
-weak_ptr<window>        window::make                        (unique_ptr<windowDriver> &driver, const u32string &title) {
+weak_ptr<window>        window::make                        (unique_ptr<windowDriver> &driver,
+                                                             const u32string &title,
+                                                             const shared_ptr<windowLogic>& logic) {
 
-    auto    windowPtr                   = make_shared<window>();
+    assert  (!driver->integrated);
 
-            windowPtr->title            = title;
+    auto    windowPtr                       = make_shared<window>();
 
-            windowPtr->driver           = move(driver);
-            windowPtr->driver->delegate = windowPtr;
+            windowPtr->title                = title;
 
-            windowPtr->driver->make     (windowPtr);
+            windowPtr->driver               = move(driver);
+            windowPtr->driver->integrated   = true;
+
+            windowPtr->logic                = logic;
+
+            windowPtr->driver->delegate     = windowPtr;
+
+            windowPtr->driver->make         (windowPtr);
 
     // and then move this pointer to application
 
-    auto    app                         = application::get_instance();
+    auto    app                             = application::get_instance();
 
-            app->bindWindow             (windowPtr);
+            app->bindWindow                 (windowPtr);
+
+    // hydrate logic thread here!
+
+            windowPtr->thread_logic         = thread(window::thread_logic_hydrater, windowPtr);
 
     return  windowPtr;
 }
 
+
+SU_SYN_PROP                                                 (window, shared_ptr<windowLogic>,   logic)
 
 SU_SYN_PROP_RO                                              (window, shared_ptr<void>,          inputDispatcher)
 
 SU_SYN_PROP_RO                                              (window, unique_ptr<windowDriver>,  driver)
 
 
+SU_SYN_PROP_RO                                              (window, bool, active)
+
+SU_SYN_PROP_RO                                              (window, bool, hidden)
+
 SU_SYN_PROP_RO                                              (window, float, dpi)
+
 
 void                    window::set_title                   (const u32string& value) {
 
@@ -67,25 +88,29 @@ const u32string&        window::get_title                   () const {
 }
 
 
-void                    window::set_size                    (const float &value) {
+void                    window::set_size                    (const size_vec2_sint &value) {
 
     size = value;
 
     driver->message (shared_from_this(), windowDriver::message_sizeChanged, nullptr);
 }
 
-const float&            window::get_size                    () const {
+const size_vec2_sint&   window::get_size                    () const {
 
     return size;
 }
 
 
-void                    window::show                        (const float &rect) {
+void                    window::show                        (const wndw_rect_sint &rect) {
+
+    hidden = false;
 
     driver->state   (shared_from_this(), windowState::shown);
 }
 
 void                    window::hide                        () {
+
+    hidden = true;
 
     driver->state   (shared_from_this(), windowState::hidden);
 }
@@ -93,21 +118,56 @@ void                    window::hide                        () {
 
 void                    window::close                       () {
 
-    auto app = application::get_instance();
+    assert(logic != nullptr);
 
-    driver->state       (shared_from_this(), windowState::hidden);
-    driver->kill        (shared_from_this());
+    thread_logic.join   ();
 
-    app->unbindWindow   (shared_from_this());
+    auto SHARED         = shared_from_this();
+
+    driver->message     (SHARED, 0, nullptr);
+
+    auto app            = application::get_instance();
+
+    driver->state       (SHARED, windowState::hidden);
+    driver->kill        (SHARED);
+
+    app->unbindWindow   (SHARED);
 }
 
 
-void                    window::sizeChanged                 (const float& newSize, const float& newDpi) {
+void                    window::sizeChanged                 (const wndw_rect_sint& newSize, const float& newDpi) {
 
-    size    = newSize;
+    size    = newSize.size;
     dpi     = newDpi;
 }
 
 void                    window::activeChanged               (bool value) {
 
+    active = value;
+}
+
+void                    window::terminate                   () {
+
+    close();
+}
+
+
+void                    window::thread_logic_hydrater       (const shared_ptr<window>& self) {
+
+    assert(self->logic != nullptr);
+
+    auto&   logic       = self->logic;
+    bool    terminate;
+
+    logic->window       = self;
+
+    logic->initialize();
+
+    do {
+
+        terminate       = !logic->step();
+
+    } while (!terminate);
+
+    logic->destory();
 }
