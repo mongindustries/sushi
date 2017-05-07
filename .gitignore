@@ -8,3 +8,7 @@
 *.exe
 *.ilk
 *.pdb
+platform/android/gradle/
+platform/windows/Debug/
+platform/windows/sushi/
+sushi/.build/

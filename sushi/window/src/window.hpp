@@ -90,7 +90,7 @@ namespace sushi { namespace wnd {
         virtual                         ~windowDriver   () = default;
     };
 
-    class window final: public windowDelegate, public std::enable_shared_from_this<window> {
+    class window final: windowDelegate, public std::enable_shared_from_this<window> {
 
         friend class sushi::app::application;
 
