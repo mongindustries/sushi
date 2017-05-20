@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5d36d470-9b0a-4393-a11f-b2231389e493" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiApp/SushiApp.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiApp/SushiApp/AppDelegate.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiApp/SushiApp/AppDelegate.mm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiApp/SushiApp/AppLogic.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiApp/SushiApp/AppLogic.mm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiApp/SushiApp/Assets.xcassets/AppIcon.appiconset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiApp/SushiApp/Base.lproj/LaunchScreen.storyboard" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiApp/SushiApp/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiApp/SushiApp/main.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver.xcodeproj/xcuserdata/rantingmong.xcuserdatad/xcschemes/SushiDriver.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver.xcodeproj/xcuserdata/rantingmong.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver/application/ApplicationView.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver/application/ApplicationView.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver/application/ApplicationViewController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver/application/ApplicationViewController.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver/window/WindowView.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver/window/WindowView.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver/window/WindowViewController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver/window/WindowViewController.mm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver/window/window.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SushiDriver/SushiDriver/window/window.mm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_app/sushi_application.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_app/sushi_application.xcodeproj/xcuserdata/rantingmong.xcuserdatad/xcschemes/ALL_BUILD.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_app/sushi_application.xcodeproj/xcuserdata/rantingmong.xcuserdatad/xcschemes/ZERO_CHECK.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_app/sushi_application.xcodeproj/xcuserdata/rantingmong.xcuserdatad/xcschemes/sushi_app.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_app/sushi_application.xcodeproj/xcuserdata/rantingmong.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_core/sushi_core.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_core/sushi_core.xcodeproj/xcuserdata/rantingmong.xcuserdatad/xcschemes/ALL_BUILD.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_core/sushi_core.xcodeproj/xcuserdata/rantingmong.xcuserdatad/xcschemes/ZERO_CHECK.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_core/sushi_core.xcodeproj/xcuserdata/rantingmong.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_wnd/sushi_window.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_wnd/sushi_window.xcodeproj/xcuserdata/rantingmong.xcuserdatad/xcschemes/ALL_BUILD.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_wnd/sushi_window.xcodeproj/xcuserdata/rantingmong.xcuserdatad/xcschemes/ZERO_CHECK.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_wnd/sushi_window.xcodeproj/xcuserdata/rantingmong.xcuserdatad/xcschemes/sushi_wnd.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sushi/su_wnd/sushi_window.xcodeproj/xcuserdata/rantingmong.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sushi/.build/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/../../sushi/.build/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sushi/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../sushi/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sushi/application/CMakeLists.txt" afterPath="$PROJECT_DIR$/../../sushi/application/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sushi/application/src/application.cpp" afterPath="$PROJECT_DIR$/../../sushi/application/src/application.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sushi/application/src/application.hpp" afterPath="$PROJECT_DIR$/../../sushi/application/src/application.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sushi/core/src/define.h" afterPath="$PROJECT_DIR$/../../sushi/core/src/define.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sushi/window/CMakeLists.txt" afterPath="$PROJECT_DIR$/../../sushi/window/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sushi/window/src/window.cpp" afterPath="$PROJECT_DIR$/../../sushi/window/src/window.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sushi/window/src/window.hpp" afterPath="$PROJECT_DIR$/../../sushi/window/src/window.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sushi/window/src/windowLogic.cpp" afterPath="$PROJECT_DIR$/../../sushi/window/src/windowLogic.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../sushi/window/src/windowLogic.hpp" afterPath="$PROJECT_DIR$/../../sushi/window/src/windowLogic.hpp" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulatoriPhone_7_10.3_x86_64_1" />
+  <component name="FavoritesManager">
+    <favorites_list name="Sushi" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/SushiApp/SushiApp/Info.plist" />
+        <option value="$PROJECT_DIR$/SushiApp/SushiApp/AppDelegate.h" />
+        <option value="$PROJECT_DIR$/SushiDriver/SushiDriver/application/ApplicationView.h" />
+        <option value="$PROJECT_DIR$/SushiDriver/SushiDriver/application/ApplicationViewController.h" />
+        <option value="$PROJECT_DIR$/SushiDriver/SushiDriver/application/application.mm" />
+        <option value="$PROJECT_DIR$/SushiDriver/SushiDriver/application/ApplicationView.m" />
+        <option value="$PROJECT_DIR$/SushiDriver/SushiDriver/window/WindowView.h" />
+        <option value="$PROJECT_DIR$/SushiDriver/SushiDriver/window/WindowViewController.h" />
+        <option value="$PROJECT_DIR$/SushiDriver/SushiDriver/window/WindowViewController.m" />
+        <option value="$PROJECT_DIR$/../../sushi/window/src/window.hpp" />
+        <option value="$PROJECT_DIR$/SushiDriver/SushiDriver/window/WindowViewController.mm" />
+        <option value="$PROJECT_DIR$/../../sushi/window/src/window.cpp" />
+        <option value="$PROJECT_DIR$/SushiApp/SushiApp/AppDelegate.m" />
+        <option value="$PROJECT_DIR$/../../sushi/core/src/define.h" />
+        <option value="$PROJECT_DIR$/SushiDriver/SushiDriver/application/application.h" />
+        <option value="$PROJECT_DIR$/../../sushi/application/src/application.hpp" />
+        <option value="$PROJECT_DIR$/SushiDriver/SushiDriver/window/window.h" />
+        <option value="$PROJECT_DIR$/SushiDriver/SushiDriver/window/window.mm" />
+        <option value="$PROJECT_DIR$/SushiDriver/SushiDriver/window/WindowView.m" />
+        <option value="$PROJECT_DIR$/SushiDriver/SushiDriver/application/ApplicationViewController.m" />
+        <option value="$PROJECT_DIR$/../../sushi/window/src/windowLogic.cpp" />
+        <option value="$PROJECT_DIR$/../../sushi/window/src/windowLogic.hpp" />
+        <option value="$PROJECT_DIR$/SushiApp/SushiApp/AppLogic.mm" />
+        <option value="$PROJECT_DIR$/SushiApp/SushiApp/AppLogic.h" />
+        <option value="$PROJECT_DIR$/SushiApp/SushiApp/AppDelegate.mm" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
+    <option name="width" value="1440" />
+    <option name="height" value="836" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>C/C++</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>C/C++</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Cidr.FilesView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sushi Platform" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SushiDriver" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SushiApp" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SushiApp" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SushiApp" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="SushiApp" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.SushiApp">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="SushiApp" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SushiApp" TARGET_NAME="SushiApp" CONFIG_NAME="Debug" SCHEME_NAME="SushiApp" RUN_TARGET_PROJECT_NAME="SushiApp" RUN_TARGET_NAME="SushiApp" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="SushiDriver" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SushiDriver" TARGET_NAME="SushiDriverFramework" CONFIG_NAME="Debug" SCHEME_NAME="SushiDriver" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="ALL_BUILD" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="sushi_application" TARGET_NAME="ALL_BUILD" CONFIG_NAME="Debug" SCHEME_NAME="ALL_BUILD" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="ZERO_CHECK" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="sushi_application" TARGET_NAME="ZERO_CHECK" CONFIG_NAME="Debug" SCHEME_NAME="ZERO_CHECK" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="sushi_app" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="sushi_application" TARGET_NAME="sushi_app" CONFIG_NAME="Debug" SCHEME_NAME="sushi_app" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="sushi_wnd" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="sushi_window" TARGET_NAME="sushi_wnd" CONFIG_NAME="Debug" SCHEME_NAME="sushi_wnd" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="SushiDriver 2" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SushiDriver" TARGET_NAME="SushiDriver" CONFIG_NAME="Debug" SCHEME_NAME="SushiDriver 2" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="Application.SushiApp" />
+      <item index="1" class="java.lang.String" itemvalue="Application.SushiDriver" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ALL_BUILD" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ZERO_CHECK" />
+      <item index="4" class="java.lang.String" itemvalue="Application.sushi_app" />
+      <item index="5" class="java.lang.String" itemvalue="Application.sushi_wnd" />
+      <item index="6" class="java.lang.String" itemvalue="Application.SushiDriver 2" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d36d470-9b0a-4393-a11f-b2231389e493" name="Default" comment="" />
+      <created>1495125231873</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1495125231873</updated>
+      <workItem from="1495125233241" duration="60000" />
+      <workItem from="1495125306404" duration="323000" />
+      <workItem from="1495125639687" duration="3894000" />
+      <workItem from="1495203025392" duration="11878000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="16155000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="22" width="1440" height="836" extended-state="6" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21564482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39895698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/window/window.mm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="appcode.project-settings://edacf280">
+      <provider selected="true" editor-type-id="AppCode.ProjectSettings">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/SushiDriver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiApp/SushiApp/Info.plist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIResponder.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="35" column="39" lean-forward="false" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiApp/SushiApp/ViewController.m" />
+    <entry file="file://$PROJECT_DIR$/SushiApp/SushiApp/AppDelegate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIWindow.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-104">
+          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/application/ApplicationView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/application/ApplicationViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/application/ApplicationView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#169#329#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sushi/core/src/vector.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-548">
+          <caret line="141" column="39" lean-forward="false" selection-start-line="141" selection-start-column="39" selection-end-line="141" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/window/WindowView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/window/WindowViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIScreen.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="67" column="38" lean-forward="false" selection-start-line="67" selection-start-column="38" selection-end-line="67" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sushi/core/src/rect-def.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sushi/core/src/rect.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sushi/core/src/define.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/memory">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="3152" column="31" lean-forward="false" selection-start-line="3152" selection-start-column="31" selection-end-line="3152" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/application/application.mm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <marker date="1495204230000" expanded="true" signature="109:162" ph="..." />
+            <marker date="1495204230000" expanded="true" signature="302:731" ph="{...}" />
+            <marker date="1495204230000" expanded="true" signature="824:862" ph="{...}" />
+            <marker date="1495204230000" expanded="true" signature="955:997" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/application/application.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+          <folding>
+            <marker date="1495252252000" expanded="true" signature="109:229" ph="..." />
+            <marker date="1495252252000" expanded="true" signature="296:652" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/Info.plist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sushi/application/src/application.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/window/window.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSData.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="104" column="16" lean-forward="false" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/window/window.mm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/window/WindowView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sushi/window/src/window.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="188" column="0" lean-forward="true" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sushi/window/src/window.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sushi/window/src/windowLogic.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../sushi/window/src/windowLogic.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiApp/SushiApp/AppLogic.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="appcode.project-settings://edacf280">
+      <provider selected="true" editor-type-id="AppCode.ProjectSettings">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiApp/SushiApp/AppLogic.mm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/application/ApplicationViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiDriver/SushiDriver/window/WindowViewController.mm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SushiApp/SushiApp/AppDelegate.mm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-296">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

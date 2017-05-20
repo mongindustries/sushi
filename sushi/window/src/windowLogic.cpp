@@ -10,4 +10,4 @@ using namespace std;
 
 using namespace sushi::wnd;
 
-SU_SYN_PROP_RO(windowLogic, shared_ptr<window>, window)
+SU_SYN_PROP_RO(windowLogic, std::weak_ptr<window>, window)

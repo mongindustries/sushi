@@ -11,7 +11,9 @@
 #include <memory>
 #include <string>
 #include <thread>
+
 #include "windowLogic.hpp"
+#include "windowSwapChain.hpp"
 
 namespace sushi { namespace app {
 
@@ -38,14 +40,19 @@ namespace sushi { namespace wnd {
      */
     class windowDelegate {
 
+    public:
+
         // The OS calls this when the OS detected that the position and/or size of the window has changed.
+        SU_DEF_FUNC(ThreadSafe)
         virtual void                    sizeChanged     (const core::wndw_rect_sint &newSize, const float &dpi) { }
 
         // The OS calls this when the application is activated or deactivated.
+        SU_DEF_FUNC(ThreadSafe)
         virtual void                    activeChanged   (bool value) { }
 
 
         // The OS calls this when the application needs to be closed.
+        SU_DEF_FUNC(ThreadSafe)
         virtual void                    terminate       () { }
     };
 
@@ -90,30 +97,48 @@ namespace sushi { namespace wnd {
         virtual                         ~windowDriver   () = default;
     };
 
-    class window final: windowDelegate, public std::enable_shared_from_this<window> {
+    /**
+     *
+     * window - Object that binds OS native views with your application logic.
+     *
+     * window - Thing that you'll first see when you start your app.
+     *
+     * window - Place where you'll define your application logic.
+     *
+     */
+    class window final: public windowDelegate, public std::enable_shared_from_this<window> {
 
         friend class sushi::app::application;
 
-
-        SU_DEF_PROP                     (std::shared_ptr<windowLogic>,  logic           )
-
-
-        SU_DEF_PROP                     (std::u32string,                title           )
-
-        SU_DEF_PROP                     (core::size_vec2_sint,          size            )
-
-        SU_DEF_PROP_RO                  (float,                         dpi             )
-
-        SU_DEF_PROP_RO                  (bool,                          active          )
-
-        SU_DEF_PROP_RO                  (bool,                          hidden          )
+        SU_DEF_PROP                     (std::shared_ptr<windowLogic>,      logic           )
 
 
-        SU_DEF_PROP_RO                  (std::shared_ptr<void>,         inputDispatcher )
+        SU_DEF_PROP                     (std::u32string,                    title           )
 
-        SU_DEF_PROP_RO                  (std::unique_ptr<windowDriver>, driver          )
+        SU_DEF_PROP                     (core::wndw_rect_sint,              bounds          )
+
+        SU_DEF_PROP_RO                  (float,                             dpi             )
+
+        SU_DEF_PROP_RO                  (bool,                              active          )
+
+        SU_DEF_PROP_RO                  (bool,                              hidden          )
+
+
+        SU_DEF_PROP_RO                  (std::unique_ptr<windowSwapChain>,  graphicsSurface )
+
+        SU_DEF_PROP_RO                  (std::shared_ptr<void>,             inputDispatcher )
+
+        SU_DEF_PROP_RO                  (std::unique_ptr<windowDriver>,     driver          )
 
     private:
+
+        // flags for the logic thread to check if states needs updating.
+
+        bool                            dirtyBounds;
+
+        bool                            dirtyActivationState;
+
+        // stuff for the logic thread.
 
         std::thread                     thread_logic;
 
@@ -124,7 +149,6 @@ namespace sushi { namespace wnd {
     public:
 
         window                                                  ();
-
 
         /**
          *

@@ -4,9 +4,12 @@
 
 #pragma once
 
-#include <memory>
 #include <deque>
 #include <mutex>
+#include <memory>
+
+#include <core/src/define.h>
+#include <core/src/rect-def.hpp>
 
 namespace sushi { namespace wnd {
 
@@ -18,13 +21,13 @@ namespace sushi { namespace wnd {
 
     protected:
 
-        SU_DEF_PROP_RO  (std::shared_ptr<sushi::wnd::window>, window);
+        SU_DEF_PROP_RO  (std::weak_ptr<sushi::wnd::window>, window)
 
     public:
 
         virtual void    initialize              ()                      = 0;
 
-        virtual void    destory                 ()                      = 0;
+        virtual void    destroy                 ()                      = 0;
 
 
         virtual bool    step                    ()                      = 0;
@@ -35,6 +38,6 @@ namespace sushi { namespace wnd {
         virtual void    didBecomeActive         ()                      = 0;
 
 
-        virtual void    contentRectChanged      (const float& newrect)  = 0;
+        virtual void    contentRectChanged      (const sushi::core::wndw_rect_sint& newrect)  = 0;
     };
 }}

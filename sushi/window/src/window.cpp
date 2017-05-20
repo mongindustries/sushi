@@ -61,18 +61,20 @@ weak_ptr<window>        window::make                        (unique_ptr<windowDr
 }
 
 
-SU_SYN_PROP                                                 (window, shared_ptr<windowLogic>,   logic)
+SU_SYN_PROP                                                 (sushi::wnd::window, shared_ptr<windowLogic>,       logic)
 
-SU_SYN_PROP_RO                                              (window, shared_ptr<void>,          inputDispatcher)
+SU_SYN_PROP_RO                                              (sushi::wnd::window, shared_ptr<void>,              inputDispatcher)
 
-SU_SYN_PROP_RO                                              (window, unique_ptr<windowDriver>,  driver)
+SU_SYN_PROP_RO                                              (sushi::wnd::window, unique_ptr<windowSwapChain>,   graphicsSurface)
+
+SU_SYN_PROP_RO                                              (sushi::wnd::window, unique_ptr<windowDriver>,      driver)
 
 
-SU_SYN_PROP_RO                                              (window, bool, active)
+SU_SYN_PROP_RO                                              (sushi::wnd::window, bool,  active)
 
-SU_SYN_PROP_RO                                              (window, bool, hidden)
+SU_SYN_PROP_RO                                              (sushi::wnd::window, bool,  hidden)
 
-SU_SYN_PROP_RO                                              (window, float, dpi)
+SU_SYN_PROP_RO                                              (sushi::wnd::window, float, dpi)
 
 
 void                    window::set_title                   (const u32string& value) {
@@ -88,16 +90,16 @@ const u32string&        window::get_title                   () const {
 }
 
 
-void                    window::set_size                    (const size_vec2_sint &value) {
+void                    window::set_bounds                  (const core::wndw_rect_sint &value) {
 
-    size = value;
+    bounds = value;
 
     driver->message (shared_from_this(), windowDriver::message_sizeChanged, nullptr);
 }
 
-const size_vec2_sint&   window::get_size                    () const {
+const wndw_rect_sint&   window::get_bounds                  () const {
 
-    return size;
+    return bounds;
 }
 
 
@@ -137,13 +139,16 @@ void                    window::close                       () {
 
 void                    window::sizeChanged                 (const wndw_rect_sint& newSize, const float& newDpi) {
 
-    size    = newSize.size;
-    dpi     = newDpi;
+    bounds      = newSize;
+    dpi         = newDpi;
+
+    dirtyBounds = true;
 }
 
 void                    window::activeChanged               (bool value) {
 
-    active = value;
+    active                  = value;
+    dirtyActivationState    = true;
 }
 
 void                    window::terminate                   () {
@@ -165,9 +170,28 @@ void                    window::thread_logic_hydrater       (const shared_ptr<wi
 
     do {
 
+        if (self->dirtyBounds) {
+
+            // TODO: change the swapchain here.
+
+            logic->contentRectChanged(self->bounds);
+
+            self->dirtyBounds = false;
+        }
+
+        if (self->dirtyActivationState) {
+
+            if (self->active)   { logic->didBecomeActive    (); }
+            else                { logic->willBecomeInactive (); }
+
+            self->dirtyActivationState = false;
+
+            // TODO: place condition variable here to stall this thread.
+        }
+
         terminate       = !logic->step();
 
     } while (!terminate);
 
-    logic->destory();
+    logic->destroy();
 }

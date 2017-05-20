@@ -6,6 +6,8 @@ using namespace std;
 using namespace sushi::app;
 using namespace sushi::wnd;
 
+application*        application::instance           = nullptr;
+
 application::application                            ():
 
     device_graphics (nullptr),

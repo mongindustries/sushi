@@ -17,20 +17,22 @@
 #define SU_DEF_PROP(Type, Name)                 protected:\
                                                 Type                Name;\
                                                 public:\
-                                                inline const Type&  get_##Name              () const;\
-                                                inline void         set_##Name              (const Type& value);
+                                                const Type&         get_##Name              () const;\
+                                                void                set_##Name              (const Type& value);
 
 
 #define SU_SYN_PROP(ParentType, Type, Name)     const Type&         ParentType::get_##Name  () const { return Name; } \
                                                 void                ParentType::set_##Name  (const Type& value) { Name = value; }
 
 
-#define SU_DEF_PROP_RO(Type, Name)              protected:\
+#define SU_DEF_PROP_RO(Type, Name)              static_assert(std::is_pointer<Type>::value == false, "Type needs to be a non-pointer value.");\
+                                                protected:\
                                                 Type                Name;\
                                                 public:\
-                                                inline const Type&  get_##Name              () const;
+                                                const Type&         get_##Name              () const;
 
-#define SU_SYN_PROP_RO(ParentType, Type, Name)  const Type&         ParentType::get_##Name  () const { return Name; }
+#define SU_SYN_PROP_RO(ParentType, Type, Name)  static_assert(std::is_pointer<Type>::value == false, "Type needs to be a non-pointer value.");\
+                                                const Type&         ParentType::get_##Name  () const { return Name; }
 
 #define SU_DEF_FUNC(...)
 
