@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60098AFF1EFBFAF500ABD168 /* sushiapplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60098AF51EFBFAF500ABD168 /* sushiapplication.framework */; };
+		60098B041EFBFAF500ABD168 /* sushiapplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60098B031EFBFAF500ABD168 /* sushiapplicationTests.swift */; };
+		60098B061EFBFAF500ABD168 /* sushiapplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 60098AF81EFBFAF500ABD168 /* sushiapplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60098B1C1EFBFB6800ABD168 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60098B1B1EFBFB6800ABD168 /* Application.swift */; };
+		60098B1E1EFBFBA000ABD168 /* ApplicationDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60098B1D1EFBFB9F00ABD168 /* ApplicationDriver.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60098B001EFBFAF500ABD168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60098AEC1EFBFAF500ABD168 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60098AF41EFBFAF500ABD168;
+			remoteInfo = sushiapplication;
+		};
+		60098B151EFBFB5600ABD168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60098B101EFBFB5600ABD168 /* sushicore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60098AC81EFBF47500ABD168;
+			remoteInfo = sushicore;
+		};
+		60098B171EFBFB5600ABD168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60098B101EFBFB5600ABD168 /* sushicore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60098AD11EFBF47600ABD168;
+			remoteInfo = sushicoreTests;
+		};
+		60098B191EFBFB5E00ABD168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60098B101EFBFB5600ABD168 /* sushicore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 60098AC71EFBF47500ABD168;
+			remoteInfo = sushicore;
+		};
+		60098B481EFBFD0F00ABD168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60098B431EFBFD0F00ABD168 /* sushiwindow.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60098B291EFBFCFF00ABD168;
+			remoteInfo = sushiwindow;
+		};
+		60098B4A1EFBFD0F00ABD168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60098B431EFBFD0F00ABD168 /* sushiwindow.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60098B321EFBFCFF00ABD168;
+			remoteInfo = sushiwindowTests;
+		};
+		60098B4C1EFBFD1800ABD168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60098B431EFBFD0F00ABD168 /* sushiwindow.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 60098B281EFBFCFF00ABD168;
+			remoteInfo = sushiwindow;
+		};
+		601AADA41F1096CC00045F87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 601AAD9E1F1096CC00045F87 /* sushigraphics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60D143E41F03F411004DE551;
+			remoteInfo = sushigraphics;
+		};
+		601AADA61F1096CC00045F87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 601AAD9E1F1096CC00045F87 /* sushigraphics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60D143ED1F03F411004DE551;
+			remoteInfo = sushigraphicsTests;
+		};
+		601AADA91F10977900045F87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 601AAD9E1F1096CC00045F87 /* sushigraphics.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 60D143E31F03F411004DE551;
+			remoteInfo = sushigraphics;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		60098AF51EFBFAF500ABD168 /* sushiapplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = sushiapplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60098AF81EFBFAF500ABD168 /* sushiapplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sushiapplication.h; sourceTree = "<group>"; };
+		60098AF91EFBFAF500ABD168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60098AFE1EFBFAF500ABD168 /* sushiapplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sushiapplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60098B031EFBFAF500ABD168 /* sushiapplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sushiapplicationTests.swift; sourceTree = "<group>"; };
+		60098B051EFBFAF500ABD168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60098B101EFBFB5600ABD168 /* sushicore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushicore.xcodeproj; path = ../sushicore/sushicore.xcodeproj; sourceTree = "<group>"; };
+		60098B1B1EFBFB6800ABD168 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		60098B1D1EFBFB9F00ABD168 /* ApplicationDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDriver.swift; sourceTree = "<group>"; };
+		60098B431EFBFD0F00ABD168 /* sushiwindow.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushiwindow.xcodeproj; path = ../sushiwindow/sushiwindow.xcodeproj; sourceTree = "<group>"; };
+		601AAD9E1F1096CC00045F87 /* sushigraphics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushigraphics.xcodeproj; path = ../sushigraphics/sushigraphics.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60098AF11EFBFAF500ABD168 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60098AFB1EFBFAF500ABD168 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60098AFF1EFBFAF500ABD168 /* sushiapplication.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60098AEB1EFBFAF500ABD168 = {
+			isa = PBXGroup;
+			children = (
+				60098B0F1EFBFB4700ABD168 /* Dependencies */,
+				60098AF61EFBFAF500ABD168 /* Products */,
+				60098AF71EFBFAF500ABD168 /* sushiapplication */,
+				60098B021EFBFAF500ABD168 /* sushiapplicationTests */,
+			);
+			sourceTree = "<group>";
+		};
+		60098AF61EFBFAF500ABD168 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60098AF51EFBFAF500ABD168 /* sushiapplication.framework */,
+				60098AFE1EFBFAF500ABD168 /* sushiapplicationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60098AF71EFBFAF500ABD168 /* sushiapplication */ = {
+			isa = PBXGroup;
+			children = (
+				60098AF81EFBFAF500ABD168 /* sushiapplication.h */,
+				60098AF91EFBFAF500ABD168 /* Info.plist */,
+				60098B1B1EFBFB6800ABD168 /* Application.swift */,
+				60098B1D1EFBFB9F00ABD168 /* ApplicationDriver.swift */,
+			);
+			path = sushiapplication;
+			sourceTree = "<group>";
+		};
+		60098B021EFBFAF500ABD168 /* sushiapplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				60098B031EFBFAF500ABD168 /* sushiapplicationTests.swift */,
+				60098B051EFBFAF500ABD168 /* Info.plist */,
+			);
+			path = sushiapplicationTests;
+			sourceTree = "<group>";
+		};
+		60098B0F1EFBFB4700ABD168 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				60098B101EFBFB5600ABD168 /* sushicore.xcodeproj */,
+				601AAD9E1F1096CC00045F87 /* sushigraphics.xcodeproj */,
+				60098B431EFBFD0F00ABD168 /* sushiwindow.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		60098B111EFBFB5600ABD168 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60098B161EFBFB5600ABD168 /* sushicore.framework */,
+				60098B181EFBFB5600ABD168 /* sushicoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60098B441EFBFD0F00ABD168 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60098B491EFBFD0F00ABD168 /* sushiwindow.framework */,
+				60098B4B1EFBFD0F00ABD168 /* sushiwindowTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		601AAD9F1F1096CC00045F87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				601AADA51F1096CC00045F87 /* sushigraphics.framework */,
+				601AADA71F1096CC00045F87 /* sushigraphicsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		60098AF21EFBFAF500ABD168 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60098B061EFBFAF500ABD168 /* sushiapplication.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		60098AF41EFBFAF500ABD168 /* sushiapplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60098B091EFBFAF500ABD168 /* Build configuration list for PBXNativeTarget "sushiapplication" */;
+			buildPhases = (
+				60098AF01EFBFAF500ABD168 /* Sources */,
+				60098AF11EFBFAF500ABD168 /* Frameworks */,
+				60098AF21EFBFAF500ABD168 /* Headers */,
+				60098AF31EFBFAF500ABD168 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				601AADAA1F10977900045F87 /* PBXTargetDependency */,
+				60098B4D1EFBFD1800ABD168 /* PBXTargetDependency */,
+				60098B1A1EFBFB5E00ABD168 /* PBXTargetDependency */,
+			);
+			name = sushiapplication;
+			productName = sushiapplication;
+			productReference = 60098AF51EFBFAF500ABD168 /* sushiapplication.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		60098AFD1EFBFAF500ABD168 /* sushiapplicationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60098B0C1EFBFAF500ABD168 /* Build configuration list for PBXNativeTarget "sushiapplicationTests" */;
+			buildPhases = (
+				60098AFA1EFBFAF500ABD168 /* Sources */,
+				60098AFB1EFBFAF500ABD168 /* Frameworks */,
+				60098AFC1EFBFAF500ABD168 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60098B011EFBFAF500ABD168 /* PBXTargetDependency */,
+			);
+			name = sushiapplicationTests;
+			productName = sushiapplicationTests;
+			productReference = 60098AFE1EFBFAF500ABD168 /* sushiapplicationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60098AEC1EFBFAF500ABD168 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Michael Ong";
+				TargetAttributes = {
+					60098AF41EFBFAF500ABD168 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+					};
+					60098AFD1EFBFAF500ABD168 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+				};
+			};
+			buildConfigurationList = 60098AEF1EFBFAF500ABD168 /* Build configuration list for PBXProject "sushiapplication" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 60098AEB1EFBFAF500ABD168;
+			productRefGroup = 60098AF61EFBFAF500ABD168 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 60098B111EFBFB5600ABD168 /* Products */;
+					ProjectRef = 60098B101EFBFB5600ABD168 /* sushicore.xcodeproj */;
+				},
+				{
+					ProductGroup = 601AAD9F1F1096CC00045F87 /* Products */;
+					ProjectRef = 601AAD9E1F1096CC00045F87 /* sushigraphics.xcodeproj */;
+				},
+				{
+					ProductGroup = 60098B441EFBFD0F00ABD168 /* Products */;
+					ProjectRef = 60098B431EFBFD0F00ABD168 /* sushiwindow.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				60098AF41EFBFAF500ABD168 /* sushiapplication */,
+				60098AFD1EFBFAF500ABD168 /* sushiapplicationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		60098B161EFBFB5600ABD168 /* sushicore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushicore.framework;
+			remoteRef = 60098B151EFBFB5600ABD168 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		60098B181EFBFB5600ABD168 /* sushicoreTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = sushicoreTests.xctest;
+			remoteRef = 60098B171EFBFB5600ABD168 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		60098B491EFBFD0F00ABD168 /* sushiwindow.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushiwindow.framework;
+			remoteRef = 60098B481EFBFD0F00ABD168 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		60098B4B1EFBFD0F00ABD168 /* sushiwindowTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = sushiwindowTests.xctest;
+			remoteRef = 60098B4A1EFBFD0F00ABD168 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		601AADA51F1096CC00045F87 /* sushigraphics.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushigraphics.framework;
+			remoteRef = 601AADA41F1096CC00045F87 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		601AADA71F1096CC00045F87 /* sushigraphicsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = sushigraphicsTests.xctest;
+			remoteRef = 601AADA61F1096CC00045F87 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60098AF31EFBFAF500ABD168 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60098AFC1EFBFAF500ABD168 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60098AF01EFBFAF500ABD168 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60098B1E1EFBFBA000ABD168 /* ApplicationDriver.swift in Sources */,
+				60098B1C1EFBFB6800ABD168 /* Application.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60098AFA1EFBFAF500ABD168 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60098B041EFBFAF500ABD168 /* sushiapplicationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		60098B011EFBFAF500ABD168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60098AF41EFBFAF500ABD168 /* sushiapplication */;
+			targetProxy = 60098B001EFBFAF500ABD168 /* PBXContainerItemProxy */;
+		};
+		60098B1A1EFBFB5E00ABD168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushicore;
+			targetProxy = 60098B191EFBFB5E00ABD168 /* PBXContainerItemProxy */;
+		};
+		60098B4D1EFBFD1800ABD168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushiwindow;
+			targetProxy = 60098B4C1EFBFD1800ABD168 /* PBXContainerItemProxy */;
+		};
+		601AADAA1F10977900045F87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushigraphics;
+			targetProxy = 601AADA91F10977900045F87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		60098B071EFBFAF500ABD168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		60098B081EFBFAF500ABD168 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		60098B0A1EFBFAF500ABD168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FV49BGP2TT;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = sushiapplication/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.rantingmong.sushiapplication;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		60098B0B1EFBFAF500ABD168 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FV49BGP2TT;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = sushiapplication/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.rantingmong.sushiapplication;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		60098B0D1EFBFAF500ABD168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = FV49BGP2TT;
+				INFOPLIST_FILE = sushiapplicationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.rantingmong.sushiapplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		60098B0E1EFBFAF500ABD168 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = FV49BGP2TT;
+				INFOPLIST_FILE = sushiapplicationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.rantingmong.sushiapplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60098AEF1EFBFAF500ABD168 /* Build configuration list for PBXProject "sushiapplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60098B071EFBFAF500ABD168 /* Debug */,
+				60098B081EFBFAF500ABD168 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60098B091EFBFAF500ABD168 /* Build configuration list for PBXNativeTarget "sushiapplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60098B0A1EFBFAF500ABD168 /* Debug */,
+				60098B0B1EFBFAF500ABD168 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60098B0C1EFBFAF500ABD168 /* Build configuration list for PBXNativeTarget "sushiapplicationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60098B0D1EFBFAF500ABD168 /* Debug */,
+				60098B0E1EFBFAF500ABD168 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 60098AEC1EFBFAF500ABD168 /* Project object */;
+}

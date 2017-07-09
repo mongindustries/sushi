@@ -13,3 +13,5 @@ platform/windows/Debug/
 platform/windows/sushi/
 sushi/.build/
 platform/ios/sushi
+xcuserdata
+xcshareddata
