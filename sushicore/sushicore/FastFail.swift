@@ -25,7 +25,7 @@ public protocol FastFailDelegate: class {
 public class    FastFail {
 
     public private(set)
-    static var          instance        : FastFail!
+    static var          instance        : FastFail = FastFail()
 
 
     public weak var     delegate        : FastFailDelegate?

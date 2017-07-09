@@ -13,6 +13,7 @@ import QuartzCore
 import sushicore
 import sushiwindow
 import sushiapplication
+import sushistorage
 
 class windowLogic: WindowLogic {
 
@@ -28,6 +29,9 @@ class windowLogic: WindowLogic {
     var         resource_vertLoc    : MTLBuffer!
 
     var         resource_vertCol    : MTLBuffer!
+
+
+    var         resource_texture    : MTLTexture!
 
 
     var         library             : MTLLibrary!
@@ -74,6 +78,19 @@ class windowLogic: WindowLogic {
 
         resource_vertLoc        = mtlDevice.makeBuffer(bytes: vertLoc, length: vertLoc.count * MemoryLayout<Float32>.size, options: .cpuCacheModeWriteCombined)
         resource_vertCol        = mtlDevice.makeBuffer(bytes: vertCol, length: vertCol.count * MemoryLayout<Float32>.size, options: .cpuCacheModeWriteCombined)
+
+        if let sadkotoura       = Application.instance.storageManager.open(from: .local)?.open("sadkotoura.jpg") as? StorageEntryFile {
+        if let sadkotourastream = sadkotoura.dataStream() {
+
+        if let image            = UIImage(data: sadkotourastream) {
+
+            resource_texture = mtlDevice.makeTexture(descriptor: .texture2DDescriptor(pixelFormat:  .rgba8Unorm,
+                                                                                      width:        Int(image.size.width),
+                                                                                      height:       Int(image.size.height),
+                                                                                      mipmapped:    false))
+
+        } } }
+
 
         CADisplayLink(target: self, selector: #selector(refresh(_:))).add(to: RunLoop.main, forMode: .defaultRunLoopMode)
     }

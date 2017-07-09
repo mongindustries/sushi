@@ -15,20 +15,73 @@ class iosStorageEntryDirectory: StorageEntryDirectory {
 
     var         url         : URL = URL(fileURLWithPath: "")
 
-    var         children    : [StorageEntry]? = nil
+    var         children    : [StorageEntry]? {
 
+        return try? FileManager.default
+            .contentsOfDirectory    (at: url, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+            .map                    ({ url -> StorageEntry in
 
-    func        contains    (_ relativeURL: URL) -> Bool {
+                var isDirectory: ObjCBool = false
 
-        return false
+                if FileManager.default.fileExists(atPath: url.path, isDirectory: &isDirectory) {
+
+                    if isDirectory.boolValue {
+
+                        let     directory       = iosStorageEntryDirectory()
+                                directory.url   = url
+
+                        return  directory
+                    }
+                    else {
+
+                        let     file            = iosStorageEntryFile()
+                                file.url        = url
+
+                        return  file
+                    }
+                }
+                else {
+
+                    FastFail.instance.crash(with: FastFailType.unexpectedPayload)
+                }
+            })
     }
 
-    func        open        (_ relativeURL: URL) -> StorageEntry? {
 
-        return nil
+    func        contains    (_ relativeURL: String) -> Bool {
+
+        return FileManager.default.fileExists(atPath: url.appendingPathComponent(relativeURL).path)
     }
 
-    func        create      (_ relativeURL: URL) -> StorageEntry? {
+    func        open        (_ relativeURL: String) -> StorageEntry? {
+
+        var isDirectory: ObjCBool   = false
+        let toOpen                  = url.appendingPathComponent(relativeURL)
+
+        if FileManager.default.fileExists(atPath: toOpen.path, isDirectory: &isDirectory) {
+
+            if isDirectory.boolValue {
+
+                let     directory       = iosStorageEntryDirectory()
+                        directory.url   = toOpen
+
+                return  directory
+            }
+            else {
+
+                let     file            = iosStorageEntryFile()
+                        file.url        = toOpen
+
+                return  file
+            }
+        }
+        else {
+
+            return nil
+        }
+    }
+
+    func        create      (_ relativeURL: String) -> StorageEntry? {
 
         return nil
     }
@@ -41,34 +94,28 @@ class iosStorageEntryFile: StorageEntryFile {
     var         url         : URL   = URL(fileURLWithPath: "")
 
 
-    func        readStream  () -> Data? {
+    func        dataStream  () -> Data? {
 
-        return nil
-    }
-
-    func        writeStream () -> Data? {
-
-        return nil
+        return try? Data.init(contentsOf: url)
     }
 }
-
 
 
 class iosStorageManagerDriver: StorageManagerDriver {
 
     func        open        (from storageLocation: StorageManagerLocation) -> StorageEntryDirectory? {
 
+        let     directory = iosStorageEntryDirectory()
+
         switch storageLocation {
-        case .cloud:
-            break
 
-        case .local:
-            break
+        case .staging:      directory.url   = URL(fileURLWithPath: NSHomeDirectory(),       isDirectory: true)
+        case .temporary:    directory.url   = URL(fileURLWithPath: NSTemporaryDirectory(),  isDirectory: true)
+        case .local:        directory.url   = Bundle.main.bundleURL
 
-        case .staging:
-            break
+        default:            return  nil
         }
 
-        return nil
+        return  directory
     }
 }

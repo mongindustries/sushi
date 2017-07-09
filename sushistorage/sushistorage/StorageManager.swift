@@ -10,9 +10,10 @@ import Foundation
 
 public enum StorageManagerLocation {
 
-    case local
-    case staging
-    case cloud
+    case local // application installation directory
+    case staging // place application would stage persistable non-volatile state data
+    case temporary // place application would stage persistable volatile state data
+    case cloud // place application can issue cloud backups with OS
 }
 
 public class StorageManager {

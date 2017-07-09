@@ -18,12 +18,12 @@ public protocol StorageEntryDirectory: StorageEntry {
     var     children    : [ StorageEntry ]? { get }
 
 
-    func    contains    (_ relativeURL: URL) -> Bool
+    func    contains    (_ relativeURL: String) -> Bool
 
 
-    func    open        (_ relativeURL: URL) -> StorageEntry?
+    func    open        (_ relativeURL: String) -> StorageEntry?
 
-    func    create      (_ relativeURL: URL) -> StorageEntry?
+    func    create      (_ relativeURL: String) -> StorageEntry?
 }
 
 public protocol StorageEntryFile: StorageEntry {
@@ -31,7 +31,5 @@ public protocol StorageEntryFile: StorageEntry {
     var     isReadOnly  : Bool { get set }
 
 
-    func    readStream  () -> Data?
-
-    func    writeStream () -> Data?
+    func    dataStream  ()-> Data?
 }
