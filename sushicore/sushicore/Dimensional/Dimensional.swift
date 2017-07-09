@@ -38,6 +38,12 @@ public struct Dimensional4<Size: Numeric> {
 
 extension Dimensional2 {
 
+    public init(_ x: Size, _ y: Size ) {
+
+        self.x = x
+        self.y = y
+    }
+
     public static func ==(_ lhs: Dimensional2, _ rhs: Dimensional2) -> Bool {
 
         return lhs.x == rhs.x && lhs.y == rhs.y
@@ -45,6 +51,13 @@ extension Dimensional2 {
 }
 
 extension Dimensional3 {
+
+    public init(_ x: Size, _ y: Size, _ z: Size) {
+
+        self.x = x
+        self.y = y
+        self.z = z
+    }
 
     public init(_ dimension2: Dimensional2<Size>, _ z: Size) {
 
@@ -61,6 +74,14 @@ extension Dimensional3 {
 }
 
 extension Dimensional4 {
+
+    public init(_ x: Size, _ y: Size, _ z: Size, _ w: Size) {
+
+        self.x = x
+        self.y = y
+        self.z = z
+        self.w = w
+    }
 
     public init(_ dimension2: Dimensional2<Size>, _ z: Size, _ w: Size) {
 

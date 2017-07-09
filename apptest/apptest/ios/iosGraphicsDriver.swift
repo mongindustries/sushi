@@ -43,8 +43,11 @@ class iosGraphicsDriver: GraphicsDeviceDriver {
 
     func            resizeGraphicsSurface   (_ graphicsSurface: GraphicsSurface, to newSize: Vector2, _ newDpi: Double) {
 
-        guard let caMetalLayer = graphicsSurface.backingSurface as? CAMetalLayer else { FastFail.instance.crash(with: .unexpectedPayload) }
+        guard let caMetalLayer  = graphicsSurface.backingSurface as? CAMetalLayer else { FastFail.instance.crash(with: .unexpectedPayload) }
 
-        caMetalLayer.drawableSize = .init(width: newSize.x, height: newSize.y)
+        let scale               = Double(UIScreen.main.scale)
+
+        caMetalLayer    .drawableSize   = .init(width: newSize.x * scale, height: newSize.y * scale)
+        graphicsSurface .backingSize    = newSize * scale
     }
 }

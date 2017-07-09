@@ -13,15 +13,18 @@ import sushicore
 import sushiwindow
 import sushiapplication
 
-class iosWindowDriver: WindowDriver {
+class iosWindowDriver: WindowDriver, iosWindowDriverVCDelegate {
 
     weak var    delegate:       (Window & WindowDriverDelegate)?
 
 
     func        initialise      () -> Any {
 
+        let     vc                              = iosWindowDriverVC(nibName: nil, bundle: nil)
+                vc.delegate                     = self
+
         let     theWindow                       = UIWindow(frame: UIScreen.main.bounds)
-                theWindow.rootViewController    = iosWindowDriverVC(nibName: nil, bundle: nil)
+                theWindow.rootViewController    = vc
 
         theWindow.makeKeyAndVisible()
 
@@ -48,5 +51,10 @@ class iosWindowDriver: WindowDriver {
                          y:         Double(bounds.origin.y  ),
                          width:     Double(bounds.width     ),
                          height:    Double(bounds.height    ))
+    }
+
+    func        informResize    (to newSize: CGSize) {
+
+        try? delegate?.graphicsSurface.resize(to: .init(Double(newSize.width), Double(newSize.height)), 0)
     }
 }

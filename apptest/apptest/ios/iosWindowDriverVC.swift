@@ -8,13 +8,21 @@
 
 import UIKit
 
-class iosWindowDriverV: UIView {
+class       iosWindowDriverV: UIView {
 
     override class var      layerClass                  : AnyClass { return CAMetalLayer.self }
 }
 
 
-class iosWindowDriverVC: UIViewController {
+protocol    iosWindowDriverVCDelegate: class {
+
+    func                    informResize                (to newSize: CGSize)
+}
+
+class       iosWindowDriverVC: UIViewController {
+
+    weak var                delegate                    : iosWindowDriverVCDelegate?
+
 
     override var            prefersStatusBarHidden      : Bool { return true }
 
@@ -27,5 +35,10 @@ class iosWindowDriverVC: UIViewController {
     override func           viewDidLoad                 () {
 
         view.backgroundColor = .gray
+    }
+
+    override func           viewWillTransition          (to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+
+        delegate?.informResize(to: size)
     }
 }

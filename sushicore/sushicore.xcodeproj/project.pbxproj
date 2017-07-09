@@ -14,6 +14,7 @@
 		60098AE51EFBF65F00ABD168 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60098AE41EFBF65F00ABD168 /* Vector.swift */; };
 		60098AE71EFBF68300ABD168 /* Dimensional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60098AE61EFBF68300ABD168 /* Dimensional.swift */; };
 		60098AE91EFBF82300ABD168 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60098AE81EFBF82300ABD168 /* Rectangle.swift */; };
+		6040455E1F12AB820002ED28 /* DimensionalOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6040455D1F12AB820002ED28 /* DimensionalOperations.swift */; };
 		6046BDF01F03EBBD00BE890A /* FastFail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6046BDEF1F03EBBD00BE890A /* FastFail.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		60098AE41EFBF65F00ABD168 /* Vector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 		60098AE61EFBF68300ABD168 /* Dimensional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensional.swift; sourceTree = "<group>"; };
 		60098AE81EFBF82300ABD168 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		6040455D1F12AB820002ED28 /* DimensionalOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionalOperations.swift; sourceTree = "<group>"; };
 		6046BDEF1F03EBBD00BE890A /* FastFail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				60098AE61EFBF68300ABD168 /* Dimensional.swift */,
+				6040455D1F12AB820002ED28 /* DimensionalOperations.swift */,
 				60098AE21EFBF50100ABD168 /* Point.swift */,
 				60098AE81EFBF82300ABD168 /* Rectangle.swift */,
 				60098AE41EFBF65F00ABD168 /* Vector.swift */,
@@ -221,6 +224,7 @@
 				6046BDF01F03EBBD00BE890A /* FastFail.swift in Sources */,
 				60098AE51EFBF65F00ABD168 /* Vector.swift in Sources */,
 				60098AE71EFBF68300ABD168 /* Dimensional.swift in Sources */,
+				6040455E1F12AB820002ED28 /* DimensionalOperations.swift in Sources */,
 				60098AE31EFBF50100ABD168 /* Point.swift in Sources */,
 				60098AE91EFBF82300ABD168 /* Rectangle.swift in Sources */,
 			);
