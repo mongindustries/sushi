@@ -13,6 +13,7 @@ import sushicore
 import sushiapplication
 import sushiwindow
 import sushigraphics
+import sushistorage
 
 @objc(iosApplicationDriverDelegate)
 class iosApplicationDriverDelegate: NSObject, UIApplicationDelegate {
@@ -25,9 +26,12 @@ class iosApplicationDriverDelegate: NSObject, UIApplicationDelegate {
 
 class iosApplicationDriver: ApplicationDriver {
 
-    var     windowDriver                    : WindowDriver          { return iosWindowDriver    () }
+    var     storageManagerDriver            : StorageManagerDriver  { return iosStorageManagerDriver    () }
 
-    var     graphicsDeviceDriver            : GraphicsDeviceDriver  { return iosGraphicsDriver  () }
+
+    var     windowDriver                    : WindowDriver          { return iosWindowDriver            () }
+
+    var     graphicsDeviceDriver            : GraphicsDeviceDriver  { return iosGraphicsDriver          () }
 
 
     func    initialise                      () {

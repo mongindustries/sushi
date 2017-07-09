@@ -10,12 +10,16 @@ import Foundation
 
 import sushiwindow
 import sushigraphics
+import sushistorage
 
 public protocol ApplicationDriver: class {
 
     var     windowDriver            : WindowDriver          { get }
 
+
     var     graphicsDeviceDriver    : GraphicsDeviceDriver  { get }
+
+    var     storageManagerDriver    : StorageManagerDriver  { get }
 
 
     func    initialise              ()

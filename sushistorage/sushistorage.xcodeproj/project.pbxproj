@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		607F595D1F12555F00DBF4EF /* StorageManagerDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607F595C1F12555F00DBF4EF /* StorageManagerDriver.swift */; };
 		60AFF5971F11F7C700F9E24F /* sushistorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 60AFF5951F11F7C700F9E24F /* sushistorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		60AFF5A61F12002600F9E24F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AFF5A51F12002600F9E24F /* StorageManager.swift */; };
 		60AFF5A81F12005F00F9E24F /* StorageEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AFF5A71F12005F00F9E24F /* StorageEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		607F595C1F12555F00DBF4EF /* StorageManagerDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerDriver.swift; sourceTree = "<group>"; };
 		60AFF5921F11F7C700F9E24F /* sushistorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = sushistorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60AFF5951F11F7C700F9E24F /* sushistorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sushistorage.h; sourceTree = "<group>"; };
 		60AFF5961F11F7C700F9E24F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,8 +54,9 @@
 			children = (
 				60AFF5951F11F7C700F9E24F /* sushistorage.h */,
 				60AFF5961F11F7C700F9E24F /* Info.plist */,
-				60AFF5A51F12002600F9E24F /* StorageManager.swift */,
 				60AFF5A71F12005F00F9E24F /* StorageEntry.swift */,
+				60AFF5A51F12002600F9E24F /* StorageManager.swift */,
+				607F595C1F12555F00DBF4EF /* StorageManagerDriver.swift */,
 			);
 			path = sushistorage;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60AFF5A81F12005F00F9E24F /* StorageEntry.swift in Sources */,
+				607F595D1F12555F00DBF4EF /* StorageManagerDriver.swift in Sources */,
 				60AFF5A61F12002600F9E24F /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

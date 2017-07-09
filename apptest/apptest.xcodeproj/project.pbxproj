@@ -18,9 +18,10 @@
 		60160B561F10C96500AB2E7D /* sushiwindow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60CB3A3B1F10C2CA004B2ABB /* sushiwindow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60160B5F1F113B8700AB2E7D /* windowLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60160B5E1F113B8700AB2E7D /* windowLogic.swift */; };
 		60AFF5871F11D9D600F9E24F /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 60AFF5861F11D9D600F9E24F /* shader.metal */; };
+		60B89BCB1F12990A0083CBD1 /* iosStorageManagerDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B89BCA1F12990A0083CBD1 /* iosStorageManagerDriver.swift */; };
+		60B89BD31F129A3E0083CBD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B89BD21F129A280083CBD1 /* LaunchScreen.storyboard */; };
 		60CB3A071F10BDD8004B2ABB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CB3A061F10BDD8004B2ABB /* main.swift */; };
 		60CB3A0E1F10BDD8004B2ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60CB3A0D1F10BDD8004B2ABB /* Assets.xcassets */; };
-		60CB3A111F10BDD8004B2ABB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60CB3A0F1F10BDD8004B2ABB /* LaunchScreen.storyboard */; };
 		60CB3A471F10C2E9004B2ABB /* iosApplicationDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CB3A461F10C2E9004B2ABB /* iosApplicationDriver.swift */; };
 		60CB3A491F10C39D004B2ABB /* iosWindowDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CB3A481F10C39D004B2ABB /* iosWindowDriver.swift */; };
 		60CB3A4B1F10C3E7004B2ABB /* iosGraphicsDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CB3A4A1F10C3E7004B2ABB /* iosGraphicsDriver.swift */; };
@@ -177,10 +178,11 @@
 		60160B5E1F113B8700AB2E7D /* windowLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = windowLogic.swift; sourceTree = "<group>"; };
 		60AFF5861F11D9D600F9E24F /* shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shader.metal; sourceTree = "<group>"; };
 		60AFF59D1F11F84700F9E24F /* sushistorage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushistorage.xcodeproj; path = ../sushistorage/sushistorage.xcodeproj; sourceTree = "<group>"; };
+		60B89BCA1F12990A0083CBD1 /* iosStorageManagerDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosStorageManagerDriver.swift; sourceTree = "<group>"; };
+		60B89BD21F129A280083CBD1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60CB3A031F10BDD8004B2ABB /* apptest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apptest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60CB3A061F10BDD8004B2ABB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		60CB3A0D1F10BDD8004B2ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		60CB3A101F10BDD8004B2ABB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60CB3A121F10BDD8004B2ABB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60CB3A1A1F10C2BF004B2ABB /* sushiapplication.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushiapplication.xcodeproj; path = ../sushiapplication/sushiapplication.xcodeproj; sourceTree = "<group>"; };
 		60CB3A231F10C2CA004B2ABB /* sushigraphics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushigraphics.xcodeproj; path = ../sushigraphics/sushigraphics.xcodeproj; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		60AFF5811F11D9BB00F9E24F /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				60B89BD21F129A280083CBD1 /* LaunchScreen.storyboard */,
 				60AFF5861F11D9D600F9E24F /* shader.metal */,
 			);
 			path = resources;
@@ -248,7 +251,6 @@
 				60CB3A0D1F10BDD8004B2ABB /* Assets.xcassets */,
 				60CB3A181F10C2AF004B2ABB /* ios */,
 				60AFF5811F11D9BB00F9E24F /* resources */,
-				60CB3A0F1F10BDD8004B2ABB /* LaunchScreen.storyboard */,
 			);
 			path = apptest;
 			sourceTree = "<group>";
@@ -258,6 +260,7 @@
 			children = (
 				60CB3A461F10C2E9004B2ABB /* iosApplicationDriver.swift */,
 				60CB3A4A1F10C3E7004B2ABB /* iosGraphicsDriver.swift */,
+				60B89BCA1F12990A0083CBD1 /* iosStorageManagerDriver.swift */,
 				60CB3A481F10C39D004B2ABB /* iosWindowDriver.swift */,
 				60160B471F10C6A900AB2E7D /* iosWindowDriverVC.swift */,
 			);
@@ -468,7 +471,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60CB3A111F10BDD8004B2ABB /* LaunchScreen.storyboard in Resources */,
+				60B89BD31F129A3E0083CBD1 /* LaunchScreen.storyboard in Resources */,
 				60CB3A0E1F10BDD8004B2ABB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +490,7 @@
 				60CB3A4B1F10C3E7004B2ABB /* iosGraphicsDriver.swift in Sources */,
 				60CB3A071F10BDD8004B2ABB /* main.swift in Sources */,
 				60AFF5871F11D9D600F9E24F /* shader.metal in Sources */,
+				60B89BCB1F12990A0083CBD1 /* iosStorageManagerDriver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,17 +543,6 @@
 			targetProxy = 60CB3A441F10C2DC004B2ABB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		60CB3A0F1F10BDD8004B2ABB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60CB3A101F10BDD8004B2ABB /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		60CB3A131F10BDD8004B2ABB /* Debug */ = {

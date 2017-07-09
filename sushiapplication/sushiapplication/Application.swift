@@ -11,6 +11,7 @@ import Foundation
 import sushicore
 import sushiwindow
 import sushigraphics
+import sushistorage
 
 public class Application {
 
@@ -38,6 +39,8 @@ public class Application {
 
     public let                      graphicsDevice  : GraphicsDevice
 
+    public let                      storageManager  : StorageManager
+
 
     public private(set)
     var                             initCallback    : (() -> Void)!
@@ -52,7 +55,9 @@ public class Application {
 
         self.driver                 = driver
 
-        self.graphicsDevice         = .init(backingType: driver.graphicsDeviceDriver.createGraphicsDevice())
+        self.storageManager         = .init(driving:        driver.storageManagerDriver)
+
+        self.graphicsDevice         = .init(backingType:    driver.graphicsDeviceDriver.createGraphicsDevice())
         self.graphicsDevice.driver  = driver.graphicsDeviceDriver
     }
 

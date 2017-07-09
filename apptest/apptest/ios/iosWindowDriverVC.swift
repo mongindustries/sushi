@@ -10,26 +10,22 @@ import UIKit
 
 class iosWindowDriverV: UIView {
 
-    override class var layerClass: AnyClass {
-
-        return CAMetalLayer.self
-    }
+    override class var      layerClass                  : AnyClass { return CAMetalLayer.self }
 }
 
 
 class iosWindowDriverVC: UIViewController {
 
-    override func loadView                  () {
+    override var            prefersStatusBarHidden      : Bool { return true }
+
+
+    override func           loadView                    () {
 
         view = iosWindowDriverV()
     }
 
-    override func viewDidLoad               () {
+    override func           viewDidLoad                 () {
 
         view.backgroundColor = .gray
-    }
-
-    override func didReceiveMemoryWarning   () {
-
     }
 }

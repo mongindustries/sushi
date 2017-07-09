@@ -17,29 +17,18 @@ public enum StorageManagerLocation {
 
 public class StorageManager {
 
-    public init             (from location: StorageManagerLocation) {
+    public private(set)
+    var             driver  : StorageManagerDriver
 
 
-    }
+    public init             (driving driver: StorageManagerDriver) {
 
-    public func enumerate   () -> [ StorageEntry ] {
-
-        return [ ]
-    }
-
-    public func contains    (_ relativeURL: URL) -> Bool {
-
-        return false
+        self.driver = driver
     }
 
 
-    public func open        (_ relativeURL: URL) -> Data {
+    public func     open    (from location: StorageManagerLocation) -> StorageEntryDirectory? {
 
-        return Data()
-    }
-
-    public func create() -> Data {
-
-        return Data()
+        return driver.open(from: location)
     }
 }
