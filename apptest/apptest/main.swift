@@ -11,11 +11,9 @@ import Foundation
 import sushiapplication
 import sushiwindow
 
-import sushistorage
-
 Application.initialise  (with: iosApplicationDriver()) {
 
-    _ = Application.instance.spawnWindow(logic: windowLogic(), title: "Hello", at: .undefined)
+    _ = Application.instance.spawnWindow(logic: windowLogic(), title: "Hello", at: .undefinedWindowLocation)
 }
 
 Application.destroy     ()

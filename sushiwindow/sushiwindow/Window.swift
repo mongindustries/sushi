@@ -20,8 +20,8 @@ public class Window: WindowDriverDelegate {
         get     { return _location }
         set(d)  {
 
-            if d == Rectangle.undefined { _location = driver.undefinedRect() }
-            else                        { _location = d }
+            if d == Rectangle.undefinedWindowLocation   { _location = driver.undefinedRect() }
+            else                                        { _location = d }
 
             driver.process(message: .sizeChanged,    data: WindowLocationDpi(location: location, dpi: dpi))
 
@@ -137,6 +137,6 @@ public class Window: WindowDriverDelegate {
 
 extension Rectangle {
 
-    public static var undefined: Rectangle { return .init(x: 0, y: 0, width: -1, height: -1) }
+    public static var undefinedWindowLocation: Rectangle { return .init(x: 0, y: 0, width: -1, height: -1) }
 }
 
