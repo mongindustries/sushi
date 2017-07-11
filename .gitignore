@@ -4,14 +4,12 @@
 [bB]uild-deps/
 
 [lL]ib/
+
 .vs/
+
 *.exe
 *.ilk
 *.pdb
-platform/android/gradle/
-platform/windows/Debug/
-platform/windows/sushi/
-sushi/.build/
-platform/ios/sushi
+
 xcuserdata
 xcshareddata
