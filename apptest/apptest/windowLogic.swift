@@ -48,18 +48,18 @@ class windowLogic: WindowLogic {
 
         commandQueue    = mtlDevice.makeCommandQueue()!
 
-        let vertLoc: [ Float32 ] = [
+        let vertLoc: [ Vector4 ] = [
 
-             0.0,  0.5, 0, 1,
-            -0.5, -0.5, 0, 1,
-             0.5, -0.5, 0, 1,
+            Vector4( 0.0,  0.5, 0, 1),
+            Vector4(-0.5, -0.5, 0, 1),
+            Vector4( 0.5, -0.5, 0, 1),
         ]
 
-        let vertCol: [ Float32 ] = [
+        let vertCol: [ Vector4 ] = [
 
-            1, 0, 0, 1,
-            0, 1, 0, 1,
-            0, 0, 1, 1
+            Vector4.init(1, 0, 0, 1),
+            Vector4.init(0, 1, 0, 1),
+            Vector4.init(0, 0, 1, 1)
         ]
 
         library                 = try? mtlDevice.makeDefaultLibrary(bundle: Bundle.main)
@@ -76,11 +76,11 @@ class windowLogic: WindowLogic {
 
         pipelineState           = try? mtlDevice.makeRenderPipelineState(descriptor: pipelineDescriptor)
 
-        resource_vertLoc        = mtlDevice.makeBuffer(bytes: vertLoc, length: vertLoc.count * MemoryLayout<Float32>.size, options: .cpuCacheModeWriteCombined)
-        resource_vertCol        = mtlDevice.makeBuffer(bytes: vertCol, length: vertCol.count * MemoryLayout<Float32>.size, options: .cpuCacheModeWriteCombined)
+        resource_vertLoc        = mtlDevice.makeBuffer(bytes: vertLoc, length: vertLoc.count * MemoryLayout<Vector4>.size, options: .cpuCacheModeWriteCombined)
+        resource_vertCol        = mtlDevice.makeBuffer(bytes: vertCol, length: vertCol.count * MemoryLayout<Vector4>.size, options: .cpuCacheModeWriteCombined)
 
-        if let sadkotoura       = Application.instance.storageManager.open(from: .local)?.open("sadkotoura.jpg") as? StorageEntryFile {
-        if let sadkotourastream = sadkotoura.dataStream() {
+        guard let sadkotoura        = Application.instance.storageManager.open(from: .local)?.open("sadkotoura.jpg") as? StorageEntryFile else { FastFail.instance.crash(with: .unexpectedPayload) }
+        guard let sadkotourastream  = sadkotoura.dataStream() else { FastFail.instance.crash(with: .unexpectedPayload) }
 
         if let image            = UIImage(data: sadkotourastream) {
 
@@ -89,8 +89,7 @@ class windowLogic: WindowLogic {
                                                                                       height:       Int(image.size.height),
                                                                                       mipmapped:    false))
 
-        } } }
-
+        }
 
         CADisplayLink(target: self, selector: #selector(refresh(_:))).add(to: RunLoop.main, forMode: .defaultRunLoopMode)
     }

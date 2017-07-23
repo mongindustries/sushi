@@ -22,7 +22,7 @@ extension Rectangle {
         return .init(x: 0, y: 0, width: 0, height: 0)
     }
 
-    public init                 (x: Double, y: Double, width: Double, height: Double) {
+    public init                 (x: Float32, y: Float32, width: Float32, height: Float32) {
 
         self.init(origin: .init(x: x, y: y), size: .init(x: width, y: height))
     }

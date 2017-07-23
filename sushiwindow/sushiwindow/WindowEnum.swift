@@ -18,4 +18,4 @@ public enum         WindowState         {   case shown
                                             case maximised
 }
 
-public typealias    WindowLocationDpi   = (location: Rectangle, dpi: Double)
+public typealias    WindowLocationDpi   = (location: Rectangle, dpi: Float32)

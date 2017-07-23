@@ -47,14 +47,14 @@ class iosWindowDriver: WindowDriver, iosWindowDriverVCDelegate {
 
         let bounds = window.rootViewController!.view.bounds
 
-        return Rectangle(x:         Double(bounds.origin.x  ),
-                         y:         Double(bounds.origin.y  ),
-                         width:     Double(bounds.width     ),
-                         height:    Double(bounds.height    ))
+        return Rectangle(x:         Float32(bounds.origin.x  ),
+                         y:         Float32(bounds.origin.y  ),
+                         width:     Float32(bounds.width     ),
+                         height:    Float32(bounds.height    ))
     }
 
     func        informResize    (to newSize: CGSize) {
 
-        try? delegate?.graphicsSurface.resize(to: .init(Double(newSize.width), Double(newSize.height)), 0)
+        try? delegate?.graphicsSurface.resize(to: .init(Float32(newSize.width), Float32(newSize.height)), 0)
     }
 }

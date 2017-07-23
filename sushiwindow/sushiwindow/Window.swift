@@ -30,9 +30,9 @@ public class Window: WindowDriverDelegate {
     }
 
 
-    private var     _dpi                : Double        = 0
+    private var     _dpi                : Float32       = 0
 
-    public var      dpi                 : Double        {
+    public var      dpi                 : Float32       {
 
         get     { return _dpi }
         set(d)  {

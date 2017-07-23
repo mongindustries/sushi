@@ -27,7 +27,7 @@ public class GraphicsSurface {
     }
 
 
-    public func     resize          (to newSize: Vector2, _ dpi: Double) throws {
+    public func     resize          (to newSize: Vector2, _ dpi: Float32) throws {
 
         guard let driver = driver else { throw FastFailType.driverNotInstalled }
 

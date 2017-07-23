@@ -15,7 +15,7 @@ public protocol GraphicsDeviceDriver: class {
     func createGraphicsDevice   () -> Any
 
 
-    func createGraphicsSurface  (with initialSize: Vector2, _ dpi: Double, to target: Any) -> Any
+    func createGraphicsSurface  (with initialSize: Vector2, _ dpi: Float32, to target: Any) -> Any
 
-    func resizeGraphicsSurface  (_ graphicsSurface: GraphicsSurface, to newSize: Vector2, _ newDpi: Double)
+    func resizeGraphicsSurface  (_ graphicsSurface: GraphicsSurface, to newSize: Vector2, _ newDpi: Float32)
 }

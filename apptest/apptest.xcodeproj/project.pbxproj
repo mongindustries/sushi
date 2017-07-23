@@ -21,6 +21,7 @@
 		60965A721F12A26700B98911 /* sushistorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AFF5A21F11F84700F9E24F /* sushistorage.framework */; };
 		60965A731F12A26700B98911 /* sushistorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60AFF5A21F11F84700F9E24F /* sushistorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60AFF5871F11D9D600F9E24F /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 60AFF5861F11D9D600F9E24F /* shader.metal */; };
+		60B383501F1B667A007FBF27 /* textureMapped.metal in Sources */ = {isa = PBXBuildFile; fileRef = 60B3834F1F1B667A007FBF27 /* textureMapped.metal */; };
 		60B89BCB1F12990A0083CBD1 /* iosStorageManagerDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B89BCA1F12990A0083CBD1 /* iosStorageManagerDriver.swift */; };
 		60B89BD31F129A3E0083CBD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B89BD21F129A280083CBD1 /* LaunchScreen.storyboard */; };
 		60CB3A071F10BDD8004B2ABB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CB3A061F10BDD8004B2ABB /* main.swift */; };
@@ -190,6 +191,7 @@
 		604045571F12A5FF0002ED28 /* sadkotoura.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sadkotoura.jpg; sourceTree = "<group>"; };
 		60AFF5861F11D9D600F9E24F /* shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shader.metal; sourceTree = "<group>"; };
 		60AFF59D1F11F84700F9E24F /* sushistorage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushistorage.xcodeproj; path = ../sushistorage/sushistorage.xcodeproj; sourceTree = "<group>"; };
+		60B3834F1F1B667A007FBF27 /* textureMapped.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = textureMapped.metal; sourceTree = "<group>"; };
 		60B89BCA1F12990A0083CBD1 /* iosStorageManagerDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosStorageManagerDriver.swift; sourceTree = "<group>"; };
 		60B89BD21F129A280083CBD1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60CB3A031F10BDD8004B2ABB /* apptest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apptest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +229,7 @@
 				604045571F12A5FF0002ED28 /* sadkotoura.jpg */,
 				60AFF5861F11D9D600F9E24F /* shader.metal */,
 				60B89BD21F129A280083CBD1 /* LaunchScreen.storyboard */,
+				60B3834F1F1B667A007FBF27 /* textureMapped.metal */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				60CB3A471F10C2E9004B2ABB /* iosApplicationDriver.swift in Sources */,
 				60CB3A4B1F10C3E7004B2ABB /* iosGraphicsDriver.swift in Sources */,
 				60CB3A071F10BDD8004B2ABB /* main.swift in Sources */,
+				60B383501F1B667A007FBF27 /* textureMapped.metal in Sources */,
 				60AFF5871F11D9D600F9E24F /* shader.metal in Sources */,
 				60B89BCB1F12990A0083CBD1 /* iosStorageManagerDriver.swift in Sources */,
 			);
@@ -612,7 +616,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -661,7 +665,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -676,6 +680,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FV49BGP2TT;
 				INFOPLIST_FILE = apptest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.rantingmong.apptest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -691,6 +696,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FV49BGP2TT;
 				INFOPLIST_FILE = apptest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.rantingmong.apptest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

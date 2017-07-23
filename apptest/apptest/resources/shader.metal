@@ -15,9 +15,9 @@ struct ColoredVertex
     float4 color;
 };
 
-vertex ColoredVertex    vertex_main     (constant float4 *position [[buffer(0)]],
-                                         constant float4 *color [[buffer(1)]],
-                                         uint vid [[vertex_id]])
+vertex ColoredVertex    vertex_main     (constant float4*   position    [[buffer(0)]],
+                                         constant float4*   color       [[buffer(1)]],
+                                         uint               vid         [[vertex_id]])
 {
     ColoredVertex vert;
 

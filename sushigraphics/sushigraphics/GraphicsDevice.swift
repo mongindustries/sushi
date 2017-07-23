@@ -19,7 +19,7 @@ public class GraphicsDevice {
     var             backingDevice   : Any
 
 
-    public func     createSurface   (with initialSize: Vector2, _ dpi: Double, to target: Any) throws -> GraphicsSurface {
+    public func     createSurface   (with initialSize: Vector2, _ dpi: Float32, to target: Any) throws -> GraphicsSurface {
 
         guard let driver = driver else { throw FastFailType.driverNotInstalled }
 
