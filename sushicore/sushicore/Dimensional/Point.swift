@@ -8,8 +8,10 @@
 
 import Foundation
 
-public typealias Point2 = Dimensional2<Int>
+import simd
 
-public typealias Point3 = Dimensional3<Int>
+public typealias Point2 = int2
 
-public typealias Point4 = Dimensional4<Int>
+public typealias Point3 = int3
+
+public typealias Point4 = int4

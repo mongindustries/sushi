@@ -1,0 +1,820 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6034B1A61F3CAE0D0055F269 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6034B1A51F3CAE0D0055F269 /* Assets.xcassets */; };
+		6034B1A91F3CAE0D0055F269 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6034B1A71F3CAE0D0055F269 /* MainMenu.xib */; };
+		6035872E1F3CAF2200DF772B /* sushicore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603586FD1F3CAEE800DF772B /* sushicore.framework */; };
+		6035872F1F3CAF2200DF772B /* sushicore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 603586FD1F3CAEE800DF772B /* sushicore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		603587321F3CAF2200DF772B /* sushigraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603587091F3CAEE800DF772B /* sushigraphics.framework */; };
+		603587331F3CAF2200DF772B /* sushigraphics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 603587091F3CAEE800DF772B /* sushigraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		603587361F3CAF2200DF772B /* sushistorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603587121F3CAEE800DF772B /* sushistorage.framework */; };
+		603587371F3CAF2200DF772B /* sushistorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 603587121F3CAEE800DF772B /* sushistorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6035873A1F3CAF2200DF772B /* sushiwindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603587181F3CAEE800DF772B /* sushiwindow.framework */; };
+		6035873B1F3CAF2200DF772B /* sushiwindow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 603587181F3CAEE800DF772B /* sushiwindow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		607C458A1F3CAF64005E31F3 /* sushiapplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603587211F3CAEF100DF772B /* sushiapplication.framework */; };
+		607C458B1F3CAF64005E31F3 /* sushiapplication.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 603587211F3CAEF100DF772B /* sushiapplication.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		607C45951F3CAF6F005E31F3 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 607C45941F3CAF6F005E31F3 /* Metal.framework */; };
+		607C45AA1F3CB1E0005E31F3 /* macosApplicationDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607C45A91F3CB1E0005E31F3 /* macosApplicationDriver.swift */; };
+		607C45C91F3CB363005E31F3 /* macosGraphicsDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607C45C81F3CB363005E31F3 /* macosGraphicsDriver.swift */; };
+		607C45CC1F3CB534005E31F3 /* macosStorageManagerDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607C45CB1F3CB534005E31F3 /* macosStorageManagerDriver.swift */; };
+		607C45CE1F3CB55A005E31F3 /* macosWindowDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607C45CD1F3CB55A005E31F3 /* macosWindowDriver.swift */; };
+		607C45D01F3CB5D4005E31F3 /* macosWindowDriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607C45CF1F3CB5D4005E31F3 /* macosWindowDriverVC.swift */; };
+		607C45D21F3CB6CD005E31F3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607C45D11F3CB6CD005E31F3 /* main.swift */; };
+		607C45D81F3CB716005E31F3 /* windowLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607C45D71F3CB716005E31F3 /* windowLogic.swift */; };
+		607C45DD1F3CB93E005E31F3 /* textureMapped.metal in Sources */ = {isa = PBXBuildFile; fileRef = 607C45DA1F3CB93D005E31F3 /* textureMapped.metal */; };
+		607C45DE1F3CB93E005E31F3 /* sadkotoura.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 607C45DB1F3CB93E005E31F3 /* sadkotoura.jpg */; };
+		607C45DF1F3CB93E005E31F3 /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 607C45DC1F3CB93E005E31F3 /* shader.metal */; };
+		607C45E11F3CC0B5005E31F3 /* windowLogic2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607C45E01F3CC0B5005E31F3 /* windowLogic2.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		603586FA1F3CAEE800DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586E21F3CAEE700DF772B /* sushicore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60098AC81EFBF47500ABD168;
+			remoteInfo = sushicore;
+		};
+		603586FC1F3CAEE800DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586E21F3CAEE700DF772B /* sushicore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60FC215A1F3CAAE70002769F;
+			remoteInfo = sushicoremac;
+		};
+		603587061F3CAEE800DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586E51F3CAEE700DF772B /* sushigraphics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60D143E41F03F411004DE551;
+			remoteInfo = sushigraphics;
+		};
+		603587081F3CAEE800DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586E51F3CAEE700DF772B /* sushigraphics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6032B8211F3CACE300CCA669;
+			remoteInfo = sushigraphicsmac;
+		};
+		6035870B1F3CAEE800DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586E81F3CAEE700DF772B /* sushiinput.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60A791021F24701000E62551;
+			remoteInfo = sushiinput;
+		};
+		6035870F1F3CAEE800DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586EB1F3CAEE700DF772B /* sushistorage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60AFF5921F11F7C700F9E24F;
+			remoteInfo = sushistorage;
+		};
+		603587111F3CAEE800DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586EB1F3CAEE700DF772B /* sushistorage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6032B84A1F3CAD4E00CCA669;
+			remoteInfo = sushistoragemac;
+		};
+		603587151F3CAEE800DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586EE1F3CAEE700DF772B /* sushiwindow.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60098B291EFBFCFF00ABD168;
+			remoteInfo = sushiwindow;
+		};
+		603587171F3CAEE800DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586EE1F3CAEE700DF772B /* sushiwindow.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6032B80D1F3CACAA00CCA669;
+			remoteInfo = sushiwindowmac;
+		};
+		6035871E1F3CAEF100DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603587191F3CAEF100DF772B /* sushiapplication.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60098AF51EFBFAF500ABD168;
+			remoteInfo = sushiapplication;
+		};
+		603587201F3CAEF100DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603587191F3CAEF100DF772B /* sushiapplication.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6032B7F61F3CAC3500CCA669;
+			remoteInfo = sushiapplicationmac;
+		};
+		603587221F3CAF0000DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603587191F3CAEF100DF772B /* sushiapplication.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6032B7F51F3CAC3500CCA669;
+			remoteInfo = sushiapplicationmac;
+		};
+		603587241F3CAF0000DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586E21F3CAEE700DF772B /* sushicore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 60FC21591F3CAAE70002769F;
+			remoteInfo = sushicoremac;
+		};
+		603587261F3CAF0000DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586E51F3CAEE700DF772B /* sushigraphics.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6032B8201F3CACE300CCA669;
+			remoteInfo = sushigraphicsmac;
+		};
+		603587281F3CAF0000DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586E21F3CAEE700DF772B /* sushicore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 60FC21591F3CAAE70002769F;
+			remoteInfo = sushicoremac;
+		};
+		6035872A1F3CAF0000DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586EB1F3CAEE700DF772B /* sushistorage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6032B8491F3CAD4E00CCA669;
+			remoteInfo = sushistoragemac;
+		};
+		6035872C1F3CAF0000DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586EE1F3CAEE700DF772B /* sushiwindow.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6032B80C1F3CACAA00CCA669;
+			remoteInfo = sushiwindowmac;
+		};
+		603587301F3CAF2200DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586E21F3CAEE700DF772B /* sushicore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 60FC21591F3CAAE70002769F;
+			remoteInfo = sushicoremac;
+		};
+		603587341F3CAF2200DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586E51F3CAEE700DF772B /* sushigraphics.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6032B8201F3CACE300CCA669;
+			remoteInfo = sushigraphicsmac;
+		};
+		603587381F3CAF2200DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586EB1F3CAEE700DF772B /* sushistorage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6032B8491F3CAD4E00CCA669;
+			remoteInfo = sushistoragemac;
+		};
+		6035873C1F3CAF2200DF772B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603586EE1F3CAEE700DF772B /* sushiwindow.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6032B80C1F3CACAA00CCA669;
+			remoteInfo = sushiwindowmac;
+		};
+		607C458C1F3CAF64005E31F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 603587191F3CAEF100DF772B /* sushiapplication.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6032B7F51F3CAC3500CCA669;
+			remoteInfo = sushiapplicationmac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6035873E1F3CAF2200DF772B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				603587371F3CAF2200DF772B /* sushistorage.framework in Embed Frameworks */,
+				6035873B1F3CAF2200DF772B /* sushiwindow.framework in Embed Frameworks */,
+				603587331F3CAF2200DF772B /* sushigraphics.framework in Embed Frameworks */,
+				607C458B1F3CAF64005E31F3 /* sushiapplication.framework in Embed Frameworks */,
+				6035872F1F3CAF2200DF772B /* sushicore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6034B1A01F3CAE0D0055F269 /* apptestmac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apptestmac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6034B1A51F3CAE0D0055F269 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6034B1A81F3CAE0D0055F269 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6034B1AA1F3CAE0D0055F269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6034B1AB1F3CAE0D0055F269 /* apptestmac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = apptestmac.entitlements; sourceTree = "<group>"; };
+		603586E21F3CAEE700DF772B /* sushicore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushicore.xcodeproj; path = ../sushicore/sushicore.xcodeproj; sourceTree = "<group>"; };
+		603586E51F3CAEE700DF772B /* sushigraphics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushigraphics.xcodeproj; path = ../sushigraphics/sushigraphics.xcodeproj; sourceTree = "<group>"; };
+		603586E81F3CAEE700DF772B /* sushiinput.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushiinput.xcodeproj; path = ../sushiinput/sushiinput.xcodeproj; sourceTree = "<group>"; };
+		603586EB1F3CAEE700DF772B /* sushistorage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushistorage.xcodeproj; path = ../sushistorage/sushistorage.xcodeproj; sourceTree = "<group>"; };
+		603586EE1F3CAEE700DF772B /* sushiwindow.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushiwindow.xcodeproj; path = ../sushiwindow/sushiwindow.xcodeproj; sourceTree = "<group>"; };
+		603587191F3CAEF100DF772B /* sushiapplication.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushiapplication.xcodeproj; path = ../sushiapplication/sushiapplication.xcodeproj; sourceTree = "<group>"; };
+		607C45941F3CAF6F005E31F3 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		607C45A91F3CB1E0005E31F3 /* macosApplicationDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macosApplicationDriver.swift; sourceTree = "<group>"; };
+		607C45C81F3CB363005E31F3 /* macosGraphicsDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macosGraphicsDriver.swift; sourceTree = "<group>"; };
+		607C45CB1F3CB534005E31F3 /* macosStorageManagerDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macosStorageManagerDriver.swift; sourceTree = "<group>"; };
+		607C45CD1F3CB55A005E31F3 /* macosWindowDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macosWindowDriver.swift; sourceTree = "<group>"; };
+		607C45CF1F3CB5D4005E31F3 /* macosWindowDriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macosWindowDriverVC.swift; sourceTree = "<group>"; };
+		607C45D11F3CB6CD005E31F3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		607C45D71F3CB716005E31F3 /* windowLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = windowLogic.swift; sourceTree = "<group>"; };
+		607C45DA1F3CB93D005E31F3 /* textureMapped.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = textureMapped.metal; path = ../../apptest/apptest/resources/textureMapped.metal; sourceTree = "<group>"; };
+		607C45DB1F3CB93E005E31F3 /* sadkotoura.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sadkotoura.jpg; path = ../../apptest/apptest/resources/sadkotoura.jpg; sourceTree = "<group>"; };
+		607C45DC1F3CB93E005E31F3 /* shader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = shader.metal; path = ../../apptest/apptest/resources/shader.metal; sourceTree = "<group>"; };
+		607C45E01F3CC0B5005E31F3 /* windowLogic2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = windowLogic2.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6034B19D1F3CAE0D0055F269 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607C45951F3CAF6F005E31F3 /* Metal.framework in Frameworks */,
+				603587361F3CAF2200DF772B /* sushistorage.framework in Frameworks */,
+				6035873A1F3CAF2200DF772B /* sushiwindow.framework in Frameworks */,
+				603587321F3CAF2200DF772B /* sushigraphics.framework in Frameworks */,
+				607C458A1F3CAF64005E31F3 /* sushiapplication.framework in Frameworks */,
+				6035872E1F3CAF2200DF772B /* sushicore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6034B1971F3CAE0D0055F269 = {
+			isa = PBXGroup;
+			children = (
+				60D3BC051F3CAE5D00FF6B0E /* dependencides */,
+				6034B1A21F3CAE0D0055F269 /* apptestmac */,
+				6034B1A11F3CAE0D0055F269 /* Products */,
+				607C45931F3CAF6F005E31F3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6034B1A11F3CAE0D0055F269 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6034B1A01F3CAE0D0055F269 /* apptestmac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6034B1A21F3CAE0D0055F269 /* apptestmac */ = {
+			isa = PBXGroup;
+			children = (
+				6034B1AB1F3CAE0D0055F269 /* apptestmac.entitlements */,
+				6034B1AA1F3CAE0D0055F269 /* Info.plist */,
+				607C45D11F3CB6CD005E31F3 /* main.swift */,
+				607C45D71F3CB716005E31F3 /* windowLogic.swift */,
+				607C45E01F3CC0B5005E31F3 /* windowLogic2.swift */,
+				6034B1A51F3CAE0D0055F269 /* Assets.xcassets */,
+				607C45A81F3CB1CB005E31F3 /* macOS */,
+				607C45D91F3CB92B005E31F3 /* resources */,
+			);
+			path = apptestmac;
+			sourceTree = "<group>";
+		};
+		603586E31F3CAEE700DF772B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				603586FB1F3CAEE800DF772B /* sushicore.framework */,
+				603586FD1F3CAEE800DF772B /* sushicore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		603586E61F3CAEE700DF772B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				603587071F3CAEE800DF772B /* sushigraphics.framework */,
+				603587091F3CAEE800DF772B /* sushigraphics.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		603586E91F3CAEE700DF772B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6035870C1F3CAEE800DF772B /* sushiinput.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		603586EC1F3CAEE700DF772B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				603587101F3CAEE800DF772B /* sushistorage.framework */,
+				603587121F3CAEE800DF772B /* sushistorage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		603586EF1F3CAEE700DF772B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				603587161F3CAEE800DF772B /* sushiwindow.framework */,
+				603587181F3CAEE800DF772B /* sushiwindow.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6035871A1F3CAEF100DF772B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6035871F1F3CAEF100DF772B /* sushiapplication.framework */,
+				603587211F3CAEF100DF772B /* sushiapplication.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		607C45931F3CAF6F005E31F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				607C45941F3CAF6F005E31F3 /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		607C45A81F3CB1CB005E31F3 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				607C45A91F3CB1E0005E31F3 /* macosApplicationDriver.swift */,
+				607C45C81F3CB363005E31F3 /* macosGraphicsDriver.swift */,
+				607C45CB1F3CB534005E31F3 /* macosStorageManagerDriver.swift */,
+				607C45CD1F3CB55A005E31F3 /* macosWindowDriver.swift */,
+				607C45CF1F3CB5D4005E31F3 /* macosWindowDriverVC.swift */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		607C45D91F3CB92B005E31F3 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				6034B1A71F3CAE0D0055F269 /* MainMenu.xib */,
+				607C45DB1F3CB93E005E31F3 /* sadkotoura.jpg */,
+				607C45DC1F3CB93E005E31F3 /* shader.metal */,
+				607C45DA1F3CB93D005E31F3 /* textureMapped.metal */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		60D3BC051F3CAE5D00FF6B0E /* dependencides */ = {
+			isa = PBXGroup;
+			children = (
+				603587191F3CAEF100DF772B /* sushiapplication.xcodeproj */,
+				603586E21F3CAEE700DF772B /* sushicore.xcodeproj */,
+				603586E51F3CAEE700DF772B /* sushigraphics.xcodeproj */,
+				603586E81F3CAEE700DF772B /* sushiinput.xcodeproj */,
+				603586EB1F3CAEE700DF772B /* sushistorage.xcodeproj */,
+				603586EE1F3CAEE700DF772B /* sushiwindow.xcodeproj */,
+			);
+			name = dependencides;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6034B19F1F3CAE0D0055F269 /* apptestmac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6034B1AE1F3CAE0D0055F269 /* Build configuration list for PBXNativeTarget "apptestmac" */;
+			buildPhases = (
+				6034B19C1F3CAE0D0055F269 /* Sources */,
+				6034B19D1F3CAE0D0055F269 /* Frameworks */,
+				6034B19E1F3CAE0D0055F269 /* Resources */,
+				6035873E1F3CAF2200DF772B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				603587231F3CAF0000DF772B /* PBXTargetDependency */,
+				603587251F3CAF0000DF772B /* PBXTargetDependency */,
+				603587271F3CAF0000DF772B /* PBXTargetDependency */,
+				603587291F3CAF0000DF772B /* PBXTargetDependency */,
+				6035872B1F3CAF0000DF772B /* PBXTargetDependency */,
+				6035872D1F3CAF0000DF772B /* PBXTargetDependency */,
+				603587311F3CAF2200DF772B /* PBXTargetDependency */,
+				603587351F3CAF2200DF772B /* PBXTargetDependency */,
+				603587391F3CAF2200DF772B /* PBXTargetDependency */,
+				6035873D1F3CAF2200DF772B /* PBXTargetDependency */,
+				607C458D1F3CAF64005E31F3 /* PBXTargetDependency */,
+			);
+			name = apptestmac;
+			productName = apptestmac;
+			productReference = 6034B1A01F3CAE0D0055F269 /* apptestmac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6034B1981F3CAE0D0055F269 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Michael Ong";
+				TargetAttributes = {
+					6034B19F1F3CAE0D0055F269 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+				};
+			};
+			buildConfigurationList = 6034B19B1F3CAE0D0055F269 /* Build configuration list for PBXProject "apptestmac" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6034B1971F3CAE0D0055F269;
+			productRefGroup = 6034B1A11F3CAE0D0055F269 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6035871A1F3CAEF100DF772B /* Products */;
+					ProjectRef = 603587191F3CAEF100DF772B /* sushiapplication.xcodeproj */;
+				},
+				{
+					ProductGroup = 603586E31F3CAEE700DF772B /* Products */;
+					ProjectRef = 603586E21F3CAEE700DF772B /* sushicore.xcodeproj */;
+				},
+				{
+					ProductGroup = 603586E61F3CAEE700DF772B /* Products */;
+					ProjectRef = 603586E51F3CAEE700DF772B /* sushigraphics.xcodeproj */;
+				},
+				{
+					ProductGroup = 603586E91F3CAEE700DF772B /* Products */;
+					ProjectRef = 603586E81F3CAEE700DF772B /* sushiinput.xcodeproj */;
+				},
+				{
+					ProductGroup = 603586EC1F3CAEE700DF772B /* Products */;
+					ProjectRef = 603586EB1F3CAEE700DF772B /* sushistorage.xcodeproj */;
+				},
+				{
+					ProductGroup = 603586EF1F3CAEE700DF772B /* Products */;
+					ProjectRef = 603586EE1F3CAEE700DF772B /* sushiwindow.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				6034B19F1F3CAE0D0055F269 /* apptestmac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		603586FB1F3CAEE800DF772B /* sushicore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushicore.framework;
+			remoteRef = 603586FA1F3CAEE800DF772B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		603586FD1F3CAEE800DF772B /* sushicore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushicore.framework;
+			remoteRef = 603586FC1F3CAEE800DF772B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		603587071F3CAEE800DF772B /* sushigraphics.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushigraphics.framework;
+			remoteRef = 603587061F3CAEE800DF772B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		603587091F3CAEE800DF772B /* sushigraphics.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushigraphics.framework;
+			remoteRef = 603587081F3CAEE800DF772B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6035870C1F3CAEE800DF772B /* sushiinput.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushiinput.framework;
+			remoteRef = 6035870B1F3CAEE800DF772B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		603587101F3CAEE800DF772B /* sushistorage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushistorage.framework;
+			remoteRef = 6035870F1F3CAEE800DF772B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		603587121F3CAEE800DF772B /* sushistorage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushistorage.framework;
+			remoteRef = 603587111F3CAEE800DF772B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		603587161F3CAEE800DF772B /* sushiwindow.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushiwindow.framework;
+			remoteRef = 603587151F3CAEE800DF772B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		603587181F3CAEE800DF772B /* sushiwindow.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushiwindow.framework;
+			remoteRef = 603587171F3CAEE800DF772B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6035871F1F3CAEF100DF772B /* sushiapplication.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushiapplication.framework;
+			remoteRef = 6035871E1F3CAEF100DF772B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		603587211F3CAEF100DF772B /* sushiapplication.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushiapplication.framework;
+			remoteRef = 603587201F3CAEF100DF772B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6034B19E1F3CAE0D0055F269 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607C45DE1F3CB93E005E31F3 /* sadkotoura.jpg in Resources */,
+				6034B1A61F3CAE0D0055F269 /* Assets.xcassets in Resources */,
+				6034B1A91F3CAE0D0055F269 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6034B19C1F3CAE0D0055F269 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607C45AA1F3CB1E0005E31F3 /* macosApplicationDriver.swift in Sources */,
+				607C45CC1F3CB534005E31F3 /* macosStorageManagerDriver.swift in Sources */,
+				607C45D81F3CB716005E31F3 /* windowLogic.swift in Sources */,
+				607C45D21F3CB6CD005E31F3 /* main.swift in Sources */,
+				607C45DD1F3CB93E005E31F3 /* textureMapped.metal in Sources */,
+				607C45D01F3CB5D4005E31F3 /* macosWindowDriverVC.swift in Sources */,
+				607C45C91F3CB363005E31F3 /* macosGraphicsDriver.swift in Sources */,
+				607C45DF1F3CB93E005E31F3 /* shader.metal in Sources */,
+				607C45CE1F3CB55A005E31F3 /* macosWindowDriver.swift in Sources */,
+				607C45E11F3CC0B5005E31F3 /* windowLogic2.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		603587231F3CAF0000DF772B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushiapplicationmac;
+			targetProxy = 603587221F3CAF0000DF772B /* PBXContainerItemProxy */;
+		};
+		603587251F3CAF0000DF772B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushicoremac;
+			targetProxy = 603587241F3CAF0000DF772B /* PBXContainerItemProxy */;
+		};
+		603587271F3CAF0000DF772B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushigraphicsmac;
+			targetProxy = 603587261F3CAF0000DF772B /* PBXContainerItemProxy */;
+		};
+		603587291F3CAF0000DF772B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushicoremac;
+			targetProxy = 603587281F3CAF0000DF772B /* PBXContainerItemProxy */;
+		};
+		6035872B1F3CAF0000DF772B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushistoragemac;
+			targetProxy = 6035872A1F3CAF0000DF772B /* PBXContainerItemProxy */;
+		};
+		6035872D1F3CAF0000DF772B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushiwindowmac;
+			targetProxy = 6035872C1F3CAF0000DF772B /* PBXContainerItemProxy */;
+		};
+		603587311F3CAF2200DF772B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushicoremac;
+			targetProxy = 603587301F3CAF2200DF772B /* PBXContainerItemProxy */;
+		};
+		603587351F3CAF2200DF772B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushigraphicsmac;
+			targetProxy = 603587341F3CAF2200DF772B /* PBXContainerItemProxy */;
+		};
+		603587391F3CAF2200DF772B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushistoragemac;
+			targetProxy = 603587381F3CAF2200DF772B /* PBXContainerItemProxy */;
+		};
+		6035873D1F3CAF2200DF772B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushiwindowmac;
+			targetProxy = 6035873C1F3CAF2200DF772B /* PBXContainerItemProxy */;
+		};
+		607C458D1F3CAF64005E31F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushiapplicationmac;
+			targetProxy = 607C458C1F3CAF64005E31F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6034B1A71F3CAE0D0055F269 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6034B1A81F3CAE0D0055F269 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6034B1AC1F3CAE0D0055F269 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6034B1AD1F3CAE0D0055F269 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		6034B1AF1F3CAE0D0055F269 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = apptestmac/apptestmac.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FV49BGP2TT;
+				INFOPLIST_FILE = apptestmac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.rantingmong.apptestmac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		6034B1B01F3CAE0D0055F269 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = apptestmac/apptestmac.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = FV49BGP2TT;
+				INFOPLIST_FILE = apptestmac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.rantingmong.apptestmac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6034B19B1F3CAE0D0055F269 /* Build configuration list for PBXProject "apptestmac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6034B1AC1F3CAE0D0055F269 /* Debug */,
+				6034B1AD1F3CAE0D0055F269 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6034B1AE1F3CAE0D0055F269 /* Build configuration list for PBXNativeTarget "apptestmac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6034B1AF1F3CAE0D0055F269 /* Debug */,
+				6034B1B01F3CAE0D0055F269 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6034B1981F3CAE0D0055F269 /* Project object */;
+}

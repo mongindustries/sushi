@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <FileRef
-      location = "group:apptest/apptest.xcodeproj">
-   </FileRef>
    <Group
       location = "container:"
       name = "sushi">
@@ -17,10 +14,23 @@
          location = "group:sushigraphics/sushigraphics.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:sushiinput/sushiinput.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:sushistorage/sushistorage.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:sushiwindow/sushiwindow.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "test facilities">
+      <FileRef
+         location = "group:apptest/apptest.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:apptestmac/apptestmac.xcodeproj">
       </FileRef>
    </Group>
 </Workspace>

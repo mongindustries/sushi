@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601104671F24718700151A7A /* sushiinput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601104631F24716F00151A7A /* sushiinput.framework */; };
+		601104681F24719A00151A7A /* sushiinput.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 601104631F24716F00151A7A /* sushiinput.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60160B481F10C6A900AB2E7D /* iosWindowDriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60160B471F10C6A900AB2E7D /* iosWindowDriverVC.swift */; };
 		60160B491F10C96500AB2E7D /* sushiapplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CB3A201F10C2BF004B2ABB /* sushiapplication.framework */; };
 		60160B4A1F10C96500AB2E7D /* sushiapplication.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60CB3A201F10C2BF004B2ABB /* sushiapplication.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -18,6 +20,8 @@
 		60160B561F10C96500AB2E7D /* sushiwindow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60CB3A3B1F10C2CA004B2ABB /* sushiwindow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60160B5F1F113B8700AB2E7D /* windowLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60160B5E1F113B8700AB2E7D /* windowLogic.swift */; };
 		6040455C1F12A60C0002ED28 /* sadkotoura.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 604045571F12A5FF0002ED28 /* sadkotoura.jpg */; };
+		606384391F3B641900897E95 /* windowLogic2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606384381F3B641900897E95 /* windowLogic2.swift */; };
+		607C45A61F3CAF79005E31F3 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 607C45A51F3CAF79005E31F3 /* Metal.framework */; };
 		60965A721F12A26700B98911 /* sushistorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AFF5A21F11F84700F9E24F /* sushistorage.framework */; };
 		60965A731F12A26700B98911 /* sushistorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60AFF5A21F11F84700F9E24F /* sushistorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60AFF5871F11D9D600F9E24F /* shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 60AFF5861F11D9D600F9E24F /* shader.metal */; };
@@ -32,6 +36,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		601104621F24716F00151A7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6011045B1F24716F00151A7A /* sushiinput.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60A791021F24701000E62551;
+			remoteInfo = sushiinput;
+		};
+		601104651F24718000151A7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6011045B1F24716F00151A7A /* sushiinput.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 60A791011F24701000E62551;
+			remoteInfo = sushiinput;
+		};
 		60160B4B1F10C96500AB2E7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 60CB3A1A1F10C2BF004B2ABB /* sushiapplication.xcodeproj */;
@@ -59,6 +77,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = 60098B281EFBFCFF00ABD168;
 			remoteInfo = sushiwindow;
+		};
+		607C45971F3CAF75005E31F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60CB3A1A1F10C2BF004B2ABB /* sushiapplication.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6032B7F61F3CAC3500CCA669;
+			remoteInfo = sushiapplicationmac;
+		};
+		607C459A1F3CAF75005E31F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60CB3A291F10C2CA004B2ABB /* sushicore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 60FC215A1F3CAAE70002769F;
+			remoteInfo = sushicoremac;
+		};
+		607C459D1F3CAF75005E31F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60CB3A231F10C2CA004B2ABB /* sushigraphics.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6032B8211F3CACE300CCA669;
+			remoteInfo = sushigraphicsmac;
+		};
+		607C45A01F3CAF75005E31F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60AFF59D1F11F84700F9E24F /* sushistorage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6032B84A1F3CAD4E00CCA669;
+			remoteInfo = sushistoragemac;
+		};
+		607C45A31F3CAF75005E31F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60CB3A261F10C2CA004B2ABB /* sushiwindow.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6032B80D1F3CACAA00CCA669;
+			remoteInfo = sushiwindowmac;
 		};
 		60965A741F12A26700B98911 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -88,26 +141,12 @@
 			remoteGlobalIDString = 60098AF51EFBFAF500ABD168;
 			remoteInfo = sushiapplication;
 		};
-		60CB3A211F10C2BF004B2ABB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 60CB3A1A1F10C2BF004B2ABB /* sushiapplication.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 60098AFE1EFBFAF500ABD168;
-			remoteInfo = sushiapplicationTests;
-		};
 		60CB3A2E1F10C2CA004B2ABB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 60CB3A291F10C2CA004B2ABB /* sushicore.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 60098AC81EFBF47500ABD168;
 			remoteInfo = sushicore;
-		};
-		60CB3A301F10C2CA004B2ABB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 60CB3A291F10C2CA004B2ABB /* sushicore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 60098AD11EFBF47600ABD168;
-			remoteInfo = sushicoreTests;
 		};
 		60CB3A341F10C2CA004B2ABB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -116,26 +155,12 @@
 			remoteGlobalIDString = 60D143E41F03F411004DE551;
 			remoteInfo = sushigraphics;
 		};
-		60CB3A361F10C2CA004B2ABB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 60CB3A231F10C2CA004B2ABB /* sushigraphics.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 60D143ED1F03F411004DE551;
-			remoteInfo = sushigraphicsTests;
-		};
 		60CB3A3A1F10C2CA004B2ABB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 60CB3A261F10C2CA004B2ABB /* sushiwindow.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 60098B291EFBFCFF00ABD168;
 			remoteInfo = sushiwindow;
-		};
-		60CB3A3C1F10C2CA004B2ABB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 60CB3A261F10C2CA004B2ABB /* sushiwindow.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 60098B321EFBFCFF00ABD168;
-			remoteInfo = sushiwindowTests;
 		};
 		60CB3A3E1F10C2DC004B2ABB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -174,6 +199,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				601104681F24719A00151A7A /* sushiinput.framework in Embed Frameworks */,
 				60160B4E1F10C96500AB2E7D /* sushicore.framework in Embed Frameworks */,
 				60160B561F10C96500AB2E7D /* sushiwindow.framework in Embed Frameworks */,
 				60160B4A1F10C96500AB2E7D /* sushiapplication.framework in Embed Frameworks */,
@@ -186,9 +212,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6011045B1F24716F00151A7A /* sushiinput.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushiinput.xcodeproj; path = ../sushiinput/sushiinput.xcodeproj; sourceTree = "<group>"; };
 		60160B471F10C6A900AB2E7D /* iosWindowDriverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosWindowDriverVC.swift; sourceTree = "<group>"; };
 		60160B5E1F113B8700AB2E7D /* windowLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = windowLogic.swift; sourceTree = "<group>"; };
 		604045571F12A5FF0002ED28 /* sadkotoura.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sadkotoura.jpg; sourceTree = "<group>"; };
+		606384381F3B641900897E95 /* windowLogic2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = windowLogic2.swift; sourceTree = "<group>"; };
+		607C45A51F3CAF79005E31F3 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		60AFF5861F11D9D600F9E24F /* shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = shader.metal; sourceTree = "<group>"; };
 		60AFF59D1F11F84700F9E24F /* sushistorage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = sushistorage.xcodeproj; path = ../sushistorage/sushistorage.xcodeproj; sourceTree = "<group>"; };
 		60B3834F1F1B667A007FBF27 /* textureMapped.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = textureMapped.metal; sourceTree = "<group>"; };
@@ -212,6 +241,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				607C45A61F3CAF79005E31F3 /* Metal.framework in Frameworks */,
+				601104671F24718700151A7A /* sushiinput.framework in Frameworks */,
 				60160B4D1F10C96500AB2E7D /* sushicore.framework in Frameworks */,
 				60160B551F10C96500AB2E7D /* sushiwindow.framework in Frameworks */,
 				60160B491F10C96500AB2E7D /* sushiapplication.framework in Frameworks */,
@@ -223,13 +254,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6011045C1F24716F00151A7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				601104631F24716F00151A7A /* sushiinput.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		606384311F3B602300897E95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				607C45A51F3CAF79005E31F3 /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		60AFF5811F11D9BB00F9E24F /* resources */ = {
 			isa = PBXGroup;
 			children = (
 				604045571F12A5FF0002ED28 /* sadkotoura.jpg */,
 				60AFF5861F11D9D600F9E24F /* shader.metal */,
-				60B89BD21F129A280083CBD1 /* LaunchScreen.storyboard */,
 				60B3834F1F1B667A007FBF27 /* textureMapped.metal */,
+				60B89BD21F129A280083CBD1 /* LaunchScreen.storyboard */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -238,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				60AFF5A21F11F84700F9E24F /* sushistorage.framework */,
+				607C45A11F3CAF75005E31F3 /* sushistorage.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,6 +296,7 @@
 				60CB3A191F10C2B5004B2ABB /* dependencies */,
 				60CB3A051F10BDD8004B2ABB /* apptest */,
 				60CB3A041F10BDD8004B2ABB /* Products */,
+				606384311F3B602300897E95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -265,14 +314,15 @@
 				60CB3A121F10BDD8004B2ABB /* Info.plist */,
 				60CB3A061F10BDD8004B2ABB /* main.swift */,
 				60160B5E1F113B8700AB2E7D /* windowLogic.swift */,
+				606384381F3B641900897E95 /* windowLogic2.swift */,
 				60CB3A0D1F10BDD8004B2ABB /* Assets.xcassets */,
-				60CB3A181F10C2AF004B2ABB /* ios */,
+				60CB3A181F10C2AF004B2ABB /* iOS */,
 				60AFF5811F11D9BB00F9E24F /* resources */,
 			);
 			path = apptest;
 			sourceTree = "<group>";
 		};
-		60CB3A181F10C2AF004B2ABB /* ios */ = {
+		60CB3A181F10C2AF004B2ABB /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				60CB3A461F10C2E9004B2ABB /* iosApplicationDriver.swift */,
@@ -281,7 +331,7 @@
 				60CB3A481F10C39D004B2ABB /* iosWindowDriver.swift */,
 				60160B471F10C6A900AB2E7D /* iosWindowDriverVC.swift */,
 			);
-			path = ios;
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		60CB3A191F10C2B5004B2ABB /* dependencies */ = {
@@ -290,6 +340,7 @@
 				60CB3A1A1F10C2BF004B2ABB /* sushiapplication.xcodeproj */,
 				60CB3A291F10C2CA004B2ABB /* sushicore.xcodeproj */,
 				60CB3A231F10C2CA004B2ABB /* sushigraphics.xcodeproj */,
+				6011045B1F24716F00151A7A /* sushiinput.xcodeproj */,
 				60AFF59D1F11F84700F9E24F /* sushistorage.xcodeproj */,
 				60CB3A261F10C2CA004B2ABB /* sushiwindow.xcodeproj */,
 			);
@@ -300,7 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				60CB3A201F10C2BF004B2ABB /* sushiapplication.framework */,
-				60CB3A221F10C2BF004B2ABB /* sushiapplicationTests.xctest */,
+				607C45981F3CAF75005E31F3 /* sushiapplication.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,7 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				60CB3A351F10C2CA004B2ABB /* sushigraphics.framework */,
-				60CB3A371F10C2CA004B2ABB /* sushigraphicsTests.xctest */,
+				607C459E1F3CAF75005E31F3 /* sushigraphics.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -318,7 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				60CB3A3B1F10C2CA004B2ABB /* sushiwindow.framework */,
-				60CB3A3D1F10C2CA004B2ABB /* sushiwindowTests.xctest */,
+				607C45A41F3CAF75005E31F3 /* sushiwindow.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -327,7 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				60CB3A2F1F10C2CA004B2ABB /* sushicore.framework */,
-				60CB3A311F10C2CA004B2ABB /* sushicoreTests.xctest */,
+				607C459B1F3CAF75005E31F3 /* sushicore.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,6 +398,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				601104661F24718000151A7A /* PBXTargetDependency */,
 				60AFF5A41F11F85000F9E24F /* PBXTargetDependency */,
 				60CB3A3F1F10C2DC004B2ABB /* PBXTargetDependency */,
 				60CB3A411F10C2DC004B2ABB /* PBXTargetDependency */,
@@ -403,6 +455,10 @@
 					ProjectRef = 60CB3A231F10C2CA004B2ABB /* sushigraphics.xcodeproj */;
 				},
 				{
+					ProductGroup = 6011045C1F24716F00151A7A /* Products */;
+					ProjectRef = 6011045B1F24716F00151A7A /* sushiinput.xcodeproj */;
+				},
+				{
 					ProductGroup = 60AFF59E1F11F84700F9E24F /* Products */;
 					ProjectRef = 60AFF59D1F11F84700F9E24F /* sushistorage.xcodeproj */;
 				},
@@ -419,6 +475,48 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		601104631F24716F00151A7A /* sushiinput.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushiinput.framework;
+			remoteRef = 601104621F24716F00151A7A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		607C45981F3CAF75005E31F3 /* sushiapplication.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushiapplication.framework;
+			remoteRef = 607C45971F3CAF75005E31F3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		607C459B1F3CAF75005E31F3 /* sushicore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushicore.framework;
+			remoteRef = 607C459A1F3CAF75005E31F3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		607C459E1F3CAF75005E31F3 /* sushigraphics.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushigraphics.framework;
+			remoteRef = 607C459D1F3CAF75005E31F3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		607C45A11F3CAF75005E31F3 /* sushistorage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushistorage.framework;
+			remoteRef = 607C45A01F3CAF75005E31F3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		607C45A41F3CAF75005E31F3 /* sushiwindow.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = sushiwindow.framework;
+			remoteRef = 607C45A31F3CAF75005E31F3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		60AFF5A21F11F84700F9E24F /* sushistorage.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -433,25 +531,11 @@
 			remoteRef = 60CB3A1F1F10C2BF004B2ABB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		60CB3A221F10C2BF004B2ABB /* sushiapplicationTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = sushiapplicationTests.xctest;
-			remoteRef = 60CB3A211F10C2BF004B2ABB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		60CB3A2F1F10C2CA004B2ABB /* sushicore.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = sushicore.framework;
 			remoteRef = 60CB3A2E1F10C2CA004B2ABB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		60CB3A311F10C2CA004B2ABB /* sushicoreTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = sushicoreTests.xctest;
-			remoteRef = 60CB3A301F10C2CA004B2ABB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		60CB3A351F10C2CA004B2ABB /* sushigraphics.framework */ = {
@@ -461,25 +545,11 @@
 			remoteRef = 60CB3A341F10C2CA004B2ABB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		60CB3A371F10C2CA004B2ABB /* sushigraphicsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = sushigraphicsTests.xctest;
-			remoteRef = 60CB3A361F10C2CA004B2ABB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		60CB3A3B1F10C2CA004B2ABB /* sushiwindow.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = sushiwindow.framework;
 			remoteRef = 60CB3A3A1F10C2CA004B2ABB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		60CB3A3D1F10C2CA004B2ABB /* sushiwindowTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = sushiwindowTests.xctest;
-			remoteRef = 60CB3A3C1F10C2CA004B2ABB /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -511,12 +581,18 @@
 				60B383501F1B667A007FBF27 /* textureMapped.metal in Sources */,
 				60AFF5871F11D9D600F9E24F /* shader.metal in Sources */,
 				60B89BCB1F12990A0083CBD1 /* iosStorageManagerDriver.swift in Sources */,
+				606384391F3B641900897E95 /* windowLogic2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		601104661F24718000151A7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = sushiinput;
+			targetProxy = 601104651F24718000151A7A /* PBXContainerItemProxy */;
+		};
 		60160B4C1F10C96500AB2E7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = sushiapplication;

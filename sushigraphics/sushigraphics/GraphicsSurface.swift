@@ -8,13 +8,14 @@
 
 import Foundation
 
+import simd
 import sushicore
 
 public class GraphicsSurface {
 
     public var      backingSurface  : Any!
 
-    public var      backingSize     : Vector2 = .zero
+    public var      backingSize     : Vector2 = .init(0)
 
 
     public internal(set)

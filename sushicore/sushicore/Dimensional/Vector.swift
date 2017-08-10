@@ -8,28 +8,11 @@
 
 import Foundation
 
-public typealias VectorSize = Float32
+import simd
 
+public typealias Vector2    = float2
 
-public typealias Vector2    = Dimensional2<VectorSize>
+public typealias Vector3    = float3
 
-public typealias Vector3    = Dimensional3<VectorSize>
-
-public typealias Vector4    = Dimensional4<VectorSize>
-
-
-extension Dimensional2 where Size == VectorSize {
-
-    public static var zero: Dimensional2 { return .init(x: 0, y: 0) }
-}
-
-extension Dimensional3 where Size == VectorSize {
-
-    public static var zero: Dimensional3 { return .init(x: 0, y: 0, z: 0) }
-}
-
-extension Dimensional4 where Size == VectorSize {
-
-    public static var zero: Dimensional4 { return .init(x: 0, y: 0, z: 0, w: 0) }
-}
+public typealias Vector4    = float4
 

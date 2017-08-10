@@ -9,27 +9,42 @@
 #include <metal_stdlib>
 using namespace metal;
 
-struct TexturedVertex
-{
-    float4 position [[position]];
-    float2 texCoord;
+struct VertexInput  {
+
+    float4 position [[attribute(0)]];
+    float4 texCoord [[attribute(1)]];
 };
 
-vertex TexturedVertex   tex_vert_main   (constant float4*   position    [[buffer(0)]],
-                                         constant float2*   texCoord    [[buffer(1)]],
-                                         uint               vid         [[vertex_id]])
-{
+struct MatrixProj   {
+
+    float4x4 proj;
+    float4x4 view;
+};
+
+struct TexturedVertex {
+
+    float4 position [[position]];
+    float4 texCoord;
+};
+
+constexpr sampler       diffSampler     (address::clamp_to_zero ,
+                                         filter::linear         ,
+                                         mag_filter::linear     ,
+                                         min_filter::linear     );
+
+vertex TexturedVertex   tex_vert_main   (VertexInput            input   [[stage_in]],
+                                         constant MatrixProj&   matrix  [[buffer(1)]]) {
+
     TexturedVertex vert;
 
-    vert.position   = position  [vid];
-    vert.texCoord   = texCoord  [vid];
+    vert.position   = matrix.proj * input.position;
+    vert.texCoord   = input.texCoord;
 
     return vert;
 }
 
 fragment float4         tex_frag_main   (TexturedVertex     vert        [[stage_in]],
-                                         texture2d<float>   texture     [[texture(0)]],
-                                         sampler            samp        [[sampler(0)]])
-{
-    return vert.position;
+                                         texture2d<float>   texture     [[texture(0)]]) {
+
+    return texture.sample(diffSampler, vert.texCoord.xy);
 }

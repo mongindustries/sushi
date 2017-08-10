@@ -8,6 +8,7 @@
 
 import Foundation
 
+import simd
 import Metal
 
 import sushicore
@@ -45,9 +46,9 @@ class iosGraphicsDriver: GraphicsDeviceDriver {
 
         guard let caMetalLayer  = graphicsSurface.backingSurface as? CAMetalLayer else { FastFail.instance.crash(with: .unexpectedPayload) }
 
-        let scale               = Float32(UIScreen.main.scale)
+        let scale                       = Float(UIScreen.main.scale)
 
         caMetalLayer    .drawableSize   = .init(width: CGFloat(newSize.x * scale), height: CGFloat(newSize.y * scale))
-        graphicsSurface .backingSize    = newSize * scale
+        graphicsSurface .backingSize    = .init(scale * newSize.x, scale * newSize.y)
     }
 }
