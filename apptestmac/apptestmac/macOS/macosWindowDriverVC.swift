@@ -19,6 +19,7 @@ class       macosWindowDriverVC: NSViewController {
     override func           loadView                    () {
 
         view = macosWindowDriverView()
+        view.resignFirstResponder()
     }
 
     override func           viewDidLoad                 () {

@@ -10,6 +10,7 @@ import Foundation
 
 import sushicore
 import sushigraphics
+import sushiinput
 
 public class Window: WindowDriverDelegate {
 
@@ -81,6 +82,9 @@ public class Window: WindowDriverDelegate {
     public private(set)
     var             graphicsSurface     : GraphicsSurface!
 
+    public private(set)
+    var             inputDispatcher     : InputDispatcher!
+
 
     public internal(set)
     var             logic               : WindowLogic
@@ -100,8 +104,11 @@ public class Window: WindowDriverDelegate {
         self.driver.delegate    = self
 
         self.backingWindow      = driver.initialise()
+
+        self.inputDispatcher    = InputDispatcher(from: self.backingWindow)
         self.graphicsSurface    = try? graphics.createSurface(with: _location.size, _dpi, to: backingWindow)
     }
+
 
     public func     send                (message: WindowDriverMessage, data: Any) {
 

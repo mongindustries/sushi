@@ -10,13 +10,13 @@ import Foundation
 
 import simd
 
-public typealias Matrix3 = simd_float3x3
+public typealias Matrix3 = float4x4
 
-public typealias Matrix4 = simd_float4x4
+public typealias Matrix4 = float4x4
 
 extension Matrix4 {
 
-    public static func orthographic(edges: RectangleEdge, near nearPlane: Float, far farPlane: Float) -> Matrix4 {
+    public static func  orthographic    (edges: RectangleEdge, near nearPlane: Float, far farPlane: Float) -> Matrix4 {
 
         let col1: Vector4 = .init([ 2 / (edges.right - edges.left),
                                    0,
@@ -35,10 +35,10 @@ extension Matrix4 {
                                    -1 * (farPlane + nearPlane) / (farPlane - nearPlane),
                                    1])
 
-        return Matrix4(col1, col2, col3, col4)
+        return Matrix4.init(col1, col2, col3, col4)
     }
 
-    public static func translate(by offset: Vector3) -> Matrix4 {
+    public static func  translate       (by offset: Vector3) -> Matrix4 {
 
         let x = offset.x
         let y = offset.y
@@ -50,7 +50,7 @@ extension Matrix4 {
                          .init(x, y, z, 1), ])
     }
 
-    public static func scale(by offset: Vector3) -> Matrix4 {
+    public static func  scale           (by offset: Vector3) -> Matrix4 {
 
         let x = offset.x
         let y = offset.y
@@ -63,7 +63,7 @@ extension Matrix4 {
     }
 
 
-    public static func rotateX(by angle: Float) -> Matrix4 {
+    public static func  rotateX         (by angle: Float) -> Matrix4 {
 
         let cosx = cos(angle)
         let sinx = sin(angle)
@@ -74,7 +74,7 @@ extension Matrix4 {
                          .init(0,    0,     0, 1), ])
     }
 
-    public static func rotateY(by angle: Float) -> Matrix4 {
+    public static func  rotateY         (by angle: Float) -> Matrix4 {
 
         let cosx = cos(angle)
         let sinx = sin(angle)
@@ -85,7 +85,7 @@ extension Matrix4 {
                          .init(    0,   0,    0, 1), ])
     }
 
-    public static func rotateZ(by angle: Float) -> Matrix4 {
+    public static func  rotateZ         (by angle: Float) -> Matrix4 {
 
         let cosx = cos(angle)
         let sinx = sin(angle)
@@ -97,7 +97,7 @@ extension Matrix4 {
     }
 
 
-    public static var identity: Matrix4 {
+    public static var   identity        : Matrix4 {
 
         return Matrix4([ .init(1, 0, 0, 0),
                          .init(0, 1, 0, 0),

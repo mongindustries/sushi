@@ -208,6 +208,7 @@
 				TargetAttributes = {
 					6032B8201F3CACE300CCA669 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 					60D143E31F03F411004DE551 = {
 						CreatedOnToolsVersion = 9.0;
@@ -332,7 +333,8 @@
 				PRODUCT_NAME = sushigraphics;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -357,7 +359,8 @@
 				PRODUCT_NAME = sushigraphics;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

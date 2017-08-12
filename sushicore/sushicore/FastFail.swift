@@ -12,7 +12,7 @@ public struct   FastFailType: Error { public var code, message: String }
 
 extension       FastFailType: Equatable {
 
-    public static func ==(lhs: FastFailType, rhs: FastFailType) -> Bool { return lhs.code == rhs.code }
+    public static func  ==              (lhs: FastFailType, rhs: FastFailType) -> Bool { return lhs.code == rhs.code }
 }
 
 

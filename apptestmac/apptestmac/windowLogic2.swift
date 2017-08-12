@@ -18,6 +18,7 @@ import sushicore
 import sushiwindow
 import sushiapplication
 import sushistorage
+import sushiinput
 
 struct quadVertex {
 
@@ -59,7 +60,25 @@ class windowLogic2: WindowLogic {
     var         cvDisplayLink       : CVDisplayLink?
 
 
+    var         rotation            : Float = 0
+
+
+    var         inputTimer          : Timer!
+
+
     func        initialise          () {
+
+        window.inputDispatcher.listen(from: InputSourcePointer<macOSInputSourceDriver>()) { (event) in
+
+            guard let pointerEvent = event as? InputDispatcherPointerEvent else { return }
+
+            print("Event at: \(String(describing: pointerEvent.points.first))")
+        }
+
+        inputTimer      = Timer.scheduledTimer(withTimeInterval: 0.03333, repeats: true, block: { [unowned self] (timer) in
+
+            self.window.inputDispatcher.flush()
+        })
 
         swapChain       = window.graphicsSurface.backingSurface as! CAMetalLayer
 
@@ -78,12 +97,11 @@ class windowLogic2: WindowLogic {
             quadVertex(position: .init( 0,  0, 0, 1), texCoord: .init(0, 0, 0, 0)),
             ]
 
-        var matrix              = matrixInfo(proj: .identity,
-                                             view: .identity)
+        var matrix              = Matrix4.identity
 
         library                 = try? mtlDevice.makeDefaultLibrary(bundle: Bundle.main)
 
-        let pipelineVertexIn                                    = MTLVertexDescriptor()
+        let pipelineVertexIn                                = MTLVertexDescriptor()
 
         pipelineVertexIn.attributes[0].format               = .float4
         pipelineVertexIn.attributes[0].offset               = 0
@@ -96,7 +114,7 @@ class windowLogic2: WindowLogic {
         pipelineVertexIn.layouts[0].stepFunction            = .perVertex
         pipelineVertexIn.layouts[0].stride                  = MemoryLayout<Vector4>.size * 2
 
-        let pipelineDescriptor                                  = MTLRenderPipelineDescriptor()
+        let pipelineDescriptor                              = MTLRenderPipelineDescriptor()
 
         pipelineDescriptor.fragmentFunction                 = library.makeFunction(name: "tex_frag_main")
         pipelineDescriptor.vertexFunction                   = library.makeFunction(name: "tex_vert_main")
@@ -112,7 +130,7 @@ class windowLogic2: WindowLogic {
                                                            options:     .cpuCacheModeWriteCombined)
 
         resource_matrix             = mtlDevice.makeBuffer(bytes:       &matrix,
-                                                           length:      MemoryLayout<matrixInfo>.stride,
+                                                           length:      MemoryLayout<Matrix4>.stride,
                                                            options:     .cpuCacheModeWriteCombined)
 
         guard let sadkotoura        = Application.instance.storageManager.open(from: .local)?.open("sadkotoura.jpg") as? StorageEntryFile
@@ -129,7 +147,7 @@ class windowLogic2: WindowLogic {
                                                                    mipmapped:    false)
 
             texDesc.resourceOptions = .storageModeManaged
-            texDesc.usage = .shaderRead
+            texDesc.usage           = .shaderRead
 
             resource_texture = mtlDevice.makeTexture(descriptor: texDesc)
 
@@ -188,20 +206,27 @@ func        refresh2             (_ link: CVDisplayLink,
 
     let drawable        = logic.swapChain.nextDrawable()!
 
-    var matrix          = matrixInfo(proj: .orthographic(edges: .init(l: 0, r: Float(drawable.texture.width ),
+    let matrix          = matrixInfo(proj: .orthographic(edges: .init(l: 0, r: Float(drawable.texture.width ),
                                                                       t: 0, b: Float(drawable.texture.height)),
                                                          near: -1,
                                                          far: 1),
-                                     view: .identity)
+                                     view: .translate(by: .init(100, 100, 0)) * .rotateZ(by: -logic.rotation))
 
-    logic.resource_matrix.contents().copyBytes(from: &matrix, count: MemoryLayout<matrixInfo>.stride)
+ // logic.rotation += 0.01
+
+    var vpmatrix        = matrix.proj * matrix.view
+
+    logic.resource_matrix
+
+        .contents   ()
+        .copyBytes  (from: &vpmatrix, count: MemoryLayout<Matrix4>.stride)
 
     let renderPassDesc  = MTLRenderPassDescriptor()
 
     renderPassDesc.colorAttachments[0].texture      = drawable.texture
     renderPassDesc.colorAttachments[0].loadAction   = .clear
     renderPassDesc.colorAttachments[0].storeAction  = .store
-    renderPassDesc.colorAttachments[0].clearColor   = .init(red: 0.25, green: 0.75, blue: 0.45, alpha: 1)
+    renderPassDesc.colorAttachments[0].clearColor   = .init(red: 0.5, green: 0.5, blue: 0.75, alpha: 1)
 
     guard let encoder               = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDesc) else { return kCVReturnError }
 

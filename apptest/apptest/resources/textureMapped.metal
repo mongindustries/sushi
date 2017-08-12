@@ -15,12 +15,6 @@ struct VertexInput  {
     float4 texCoord [[attribute(1)]];
 };
 
-struct MatrixProj   {
-
-    float4x4 proj;
-    float4x4 view;
-};
-
 struct TexturedVertex {
 
     float4 position [[position]];
@@ -32,12 +26,12 @@ constexpr sampler       diffSampler     (address::clamp_to_zero ,
                                          mag_filter::linear     ,
                                          min_filter::linear     );
 
-vertex TexturedVertex   tex_vert_main   (VertexInput            input   [[stage_in]],
-                                         constant MatrixProj&   matrix  [[buffer(1)]]) {
+vertex TexturedVertex   tex_vert_main   (VertexInput        input   [[stage_in]],
+                                         constant float4x4& matrix  [[buffer(1)]]) {
 
     TexturedVertex vert;
 
-    vert.position   = matrix.proj * input.position;
+    vert.position   = matrix * input.position;
     vert.texCoord   = input.texCoord;
 
     return vert;

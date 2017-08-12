@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+/**
+
+ Protocol that an `InputSource` requires to have to properly interact with the OS.
+
+ */
+public protocol InputSourceDriver {
+
+    weak var    inputSource     : InputSourceAny! { get set }
+
+
+    init                        ()
+
+
+    func        initialize      (from backingStore: Any)
+
+    func        destroy         ()
+}
