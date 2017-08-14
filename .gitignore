@@ -1,5 +1,8 @@
 ## Build generated
 
+[dD]ebug/
+[rR]elease/
+
 [bB]uild/
 [bB]uild-deps/
 
@@ -11,5 +14,9 @@
 *.ilk
 *.pdb
 
+*.vcxproj.filters
+
 xcuserdata
 xcshareddata
+
+_dep/
