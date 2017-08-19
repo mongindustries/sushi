@@ -3,6 +3,8 @@
 #include <sushicore/Rectangle.h>
 #include <sushicore/PointerOwnership.h>
 
+#include "windowDriverMessages.h"
+
 namespace sushi::window {
 
     class Window;
@@ -17,7 +19,7 @@ namespace sushi::drivers {
         virtual ~WindowDriverDelegate               () = default;
 
 
-        virtual void            send                (unsigned int message, SUSHI_PT_TRANSFER void* data) = 0;
+        virtual void            send                (window::WindowDriverMessages message, SUSHI_PT_TRANSFER void* data) = 0;
     };
 
     class WindowDriver {
@@ -46,6 +48,6 @@ namespace sushi::drivers {
         virtual void            destroy             () = 0;
 
 
-        virtual void            process             (unsigned int message, SUSHI_PT_TRANSFER void* data) = 0;
+        virtual void            process             (window::WindowDriverMessages message, SUSHI_PT_TRANSFER void* data) = 0;
     };
 }

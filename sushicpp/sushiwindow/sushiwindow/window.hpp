@@ -59,7 +59,7 @@ class Window final: public core::CoreObject, public drivers::WindowDriverDelegat
 
         const std::u16string&           getTitle            () const { return _title; }
 
-        const unsigned int              getWindowState      () const { return _windowState; }
+        const unsigned int&             getWindowState      () const { return _windowState; }
 
 
         void                            setLocation         (const core::Rectangle& value);
@@ -73,6 +73,6 @@ class Window final: public core::CoreObject, public drivers::WindowDriverDelegat
 
     private:
 
-        void                            send                (unsigned message, void* data) override;
+        void                            send                (WindowDriverMessages message, void* data) override;
     };
 }

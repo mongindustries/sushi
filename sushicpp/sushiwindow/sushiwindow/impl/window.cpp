@@ -7,11 +7,13 @@
 #include "../window.hpp"
 #include "../windowLogic.hpp"
 
+using namespace sushi::core;
+
 using namespace sushi::window;
 using namespace sushi::drivers;
 
 
-Window::Window          (WindowDriver* driver, WindowLogic* logic):
+Window::Window                   (WindowDriver* driver, WindowLogic* logic):
 
     CoreObject              (),
     WindowDriverDelegate    (),
@@ -30,21 +32,50 @@ Window::Window          (WindowDriver* driver, WindowLogic* logic):
     _windowLogic->window = this;
 }
 
-Window::~Window         () {
+Window::~Window                 () {
+
+    delete _windowLogic;
+    delete _windowDriver;
+}
+
+
+void Window::setLocation        (const Rectangle& value) {
+
+    if (_location != value) {
+
+        _location = value;
+
+        // TODO: add checker for undefined rectangle
+
+        auto valuePass = new Rectangle(value);
+        _windowDriver->process(WindowDriverMessages::sizeChanged, valuePass);
+
+        delete valuePass;
+    }
+}
+
+void Window::setDPI             (const float& value) {
+
+    if (_dpi != value) {
+        
+        _dpi = value;
+
+        auto valuePass = new float(value);
+        _windowDriver->process(WindowDriverMessages::sizeChanged, valuePass);
+
+        delete valuePass;
+    }
+}
+
+void Window::setTitle           (const std::u16string& value) {
+
 
 }
 
-void Window::setLocation(const core::Rectangle& value) {
+void Window::setWindowState     (const unsigned& value) {
+
 }
 
-void Window::setDPI(const float& value) {
-}
+void Window::send               (WindowDriverMessages message, void* data) {
 
-void Window::setTitle(const std::u16string& value) {
-}
-
-void Window::setWindowState(const unsigned& value) {
-}
-
-void    Window::send    (unsigned message, void* data) {
 }

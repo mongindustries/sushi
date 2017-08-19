@@ -7,52 +7,70 @@
 #pragma once
 
 #include "Vector.h"
+
 #include <glm/detail/type_float.hpp>
+#include <utility>
 
 namespace sushi::core {
 
-struct Rectangle {
+    using namespace std::rel_ops;
 
-    glm::vec2           location;
+    struct Rectangle {
 
-    glm::vec2           size;
-};
+        glm::vec2           location;
 
-struct RectangleEdge {
+        glm::vec2           size;
+    };
+
+    struct RectangleEdge {
     
-    glm::float32        left;
+        glm::float32        left;
 
-    glm::float32        right;
+        glm::float32        right;
 
-    glm::float32        top;
+        glm::float32        top;
 
-    glm::float32        bottom;
-};
+        glm::float32        bottom;
+    };
 
-inline Rectangle        make_rectangle  (const glm::vec2& location,
-                                         const glm::vec2& size) {
+    inline Rectangle        make_rectangle  (const glm::vec2& location,
+                                             const glm::vec2& size) {
     
-    auto    rectangle           = Rectangle();
+        auto    rectangle           = Rectangle();
 
-            rectangle.location  = location;
-            rectangle.size      = size;
+                rectangle.location  = location;
+                rectangle.size      = size;
 
-    return  rectangle;
-}
+        return  rectangle;
+    }
 
-inline RectangleEdge    make_rectangle  (const glm::float32 l, 
-                                         const glm::float32 r, 
-                                         const glm::float32 t, 
-                                         const glm::float32 b) {
+    inline RectangleEdge    make_rectangle  (const glm::float32 l, 
+                                             const glm::float32 r, 
+                                             const glm::float32 t, 
+                                             const glm::float32 b) {
     
-    auto    rectangle           = RectangleEdge();
+        auto    rectangle           = RectangleEdge();
 
-            rectangle.left      = l;
-            rectangle.right     = r;
+                rectangle.left      = l;
+                rectangle.right     = r;
 
-            rectangle.top       = t;
-            rectangle.bottom    = b;
+                rectangle.top       = t;
+                rectangle.bottom    = b;
 
-    return  rectangle;
-}
+        return  rectangle;
+    }
+
+
+    inline bool operator == (const Rectangle& lhs, const Rectangle& rhs) {
+    
+        return lhs.location == rhs.location && lhs.size == rhs.size;
+    }
+
+    inline bool operator == (const RectangleEdge& lhs, const RectangleEdge& rhs) {
+
+        return  lhs.left == rhs.left &&
+                lhs.right == rhs.right &&
+                lhs.top == rhs.top &&
+                lhs.bottom == rhs.bottom;
+    }
 }

@@ -29,6 +29,7 @@
   <ItemGroup>
     <ClInclude Include="..\sushiwindow\window.hpp" />
     <ClInclude Include="..\sushiwindow\windowDriver.hpp" />
+    <ClInclude Include="..\sushiwindow\windowDriverMessages.h" />
     <ClInclude Include="..\sushiwindow\windowLogic.hpp" />
   </ItemGroup>
   <ItemGroup>

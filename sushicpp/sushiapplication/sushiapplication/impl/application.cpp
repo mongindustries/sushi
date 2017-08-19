@@ -11,10 +11,17 @@ using namespace sushi::drivers;
 void                        Application::initialise         (applicationDriver* platformDriver,
                                                              const initialiseCallback& initCallback) {
 
+    instance = new Application(platformDriver);
+    instance->initialisationCallback = initCallback;
+
+    instance->platformDriver->initialise();
 }
 
 void                        Application::destroy            () {
 
+    instance->platformDriver->destroy();
+
+    delete instance;
 }
 
 
@@ -25,11 +32,13 @@ Application::Application                                    (applicationDriver* 
     platformDriver(nullptr),
     graphicsDevice(nullptr),
     storageManager(nullptr) {
+
+
 }
 
 Application::~Application                                   () {
 
-
+    delete platformDriver;
 }
 
 
@@ -59,5 +68,12 @@ Window*                     Application::spawnWindow        (WindowLogic* logic,
                                                              const u16string& title,
                                                              const Rectangle& location) const {
 
-    return nullptr;
+    auto    window = new Window(platformDriver->getWindowDriver(), logic);
+
+            window->setTitle(title);
+            window->setLocation(location);
+
+            logic->initialise(nullptr);
+
+    return  window;
 }
