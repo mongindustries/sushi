@@ -1,10 +1,10 @@
 #include "../application.hpp"
-#include "sushicore/FastFail.h"
 
 using namespace std;
 
 using namespace sushi::core;
 using namespace sushi::application;
+using namespace sushi::window;
 
 using namespace sushi::drivers;
 
@@ -18,12 +18,13 @@ void                        Application::destroy            () {
 }
 
 
-Application::Application                                    (void* platformDriver) :
+Application::Application                                    (applicationDriver* platformDriver):
+
+    CoreObject(),
 
     platformDriver(nullptr),
     graphicsDevice(nullptr),
     storageManager(nullptr) {
-
 }
 
 Application::~Application                                   () {
@@ -48,17 +49,15 @@ const void*                 Application::getStorageManager  () const {
 }
 
 
-const vector<void*>&        Application::getTrackedWindows  () const {
+const vector<Window*>&      Application::getTrackedWindows  () const {
 
     return trackedWindows;
 }
 
-
-void*                       Application::spawnWindow        (void* logic,
+// ReSharper disable once CppMemberFunctionMayBeStatic
+Window*                     Application::spawnWindow        (WindowLogic* logic,
                                                              const u16string& title,
-                                                             const Rectangle& location) {
-
-    FastFail::instance->crash(failureTypes::unimplemented());
+                                                             const Rectangle& location) const {
 
     return nullptr;
 }

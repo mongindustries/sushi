@@ -11,6 +11,11 @@
 #include <string>
 
 #include <sushicore/Rectangle.h>
+#include <sushicore/CoreObject.h>
+#include <sushicore/PointerOwnership.h>
+
+#include <sushiwindow/window.hpp>
+#include <sushiwindow/windowLogic.hpp>
 
 #include "applicationDriver.hpp"
 
@@ -30,17 +35,18 @@ namespace sushi::application {
 
         - Use `spawnWindow()` to create a window. **DO NOT INITIALISE BY CREATING A WINDOW INSTANCE**
     */
-    class Application final {
+    class Application final: public core::CoreObject {
     
     public:
 
         typedef std::function<void(void)>   initialiseCallback;
 
 
+        SUSHI_PO_STRONG
         static Application*                 instance;
 
 
-        static void                         initialise          (drivers::applicationDriver* platformDriver,
+        static void                         initialise          (SUSHI_PT_TRANSFER drivers::applicationDriver* platformDriver,
                                                                  const initialiseCallback& initCallback);
 
         static void                         destroy             ();
@@ -58,12 +64,13 @@ namespace sushi::application {
         initialiseCallback                  initialisationCallback;
 
 
-        std::vector<void*>                  trackedWindows;
+        SUSHI_PO_WEAK
+        std::vector<window::Window*>        trackedWindows;
 
 
     public:
 
-        explicit Application                                    (void* platformDriver);
+        explicit Application                                    (SUSHI_PT_TRANSFER drivers::applicationDriver* platformDriver);
 
         ~Application                                            ();
 
@@ -75,12 +82,12 @@ namespace sushi::application {
         const void*                         getStorageManager   () const;
 
 
-        const std::vector<void*>&           getTrackedWindows   () const;
+        const std::vector<window::Window*>& getTrackedWindows   () const;
 
     public:
 
-        void*                               spawnWindow         (void* logic,
+        SUSHI_PO_STRONG window::Window*     spawnWindow         (window::WindowLogic* logic,
                                                                  const std::u16string& title,
-                                                                 const core::Rectangle& location);
+                                                                 const core::Rectangle& location) const;
     };
 }

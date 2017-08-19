@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.3
+VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sushicore", "sushicore\sushicorewin32\sushicore.vcxproj", "{F82C54A2-A3B7-44DC-A487-7AE692DF4096}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sushiapplication", "sushiapplication\sushiapplicationwin32\sushiapplication.vcxproj", "{5066207E-FF62-4694-B6C4-A909752B5A2E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sushiwindow", "sushiwindow\sushiwindowwin32\sushiwindow.vcxproj", "{681B78CB-89CD-48AE-93CE-3DBC898F6C4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,18 @@ Global
 		{5066207E-FF62-4694-B6C4-A909752B5A2E}.Release|x64.Build.0 = Release|x64
 		{5066207E-FF62-4694-B6C4-A909752B5A2E}.Release|x86.ActiveCfg = Release|Win32
 		{5066207E-FF62-4694-B6C4-A909752B5A2E}.Release|x86.Build.0 = Release|Win32
+		{681B78CB-89CD-48AE-93CE-3DBC898F6C4C}.Debug|ARM.ActiveCfg = Debug|ARM
+		{681B78CB-89CD-48AE-93CE-3DBC898F6C4C}.Debug|ARM.Build.0 = Debug|ARM
+		{681B78CB-89CD-48AE-93CE-3DBC898F6C4C}.Debug|x64.ActiveCfg = Debug|x64
+		{681B78CB-89CD-48AE-93CE-3DBC898F6C4C}.Debug|x64.Build.0 = Debug|x64
+		{681B78CB-89CD-48AE-93CE-3DBC898F6C4C}.Debug|x86.ActiveCfg = Debug|Win32
+		{681B78CB-89CD-48AE-93CE-3DBC898F6C4C}.Debug|x86.Build.0 = Debug|Win32
+		{681B78CB-89CD-48AE-93CE-3DBC898F6C4C}.Release|ARM.ActiveCfg = Release|ARM
+		{681B78CB-89CD-48AE-93CE-3DBC898F6C4C}.Release|ARM.Build.0 = Release|ARM
+		{681B78CB-89CD-48AE-93CE-3DBC898F6C4C}.Release|x64.ActiveCfg = Release|x64
+		{681B78CB-89CD-48AE-93CE-3DBC898F6C4C}.Release|x64.Build.0 = Release|x64
+		{681B78CB-89CD-48AE-93CE-3DBC898F6C4C}.Release|x86.ActiveCfg = Release|Win32
+		{681B78CB-89CD-48AE-93CE-3DBC898F6C4C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

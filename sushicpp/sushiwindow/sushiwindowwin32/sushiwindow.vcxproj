@@ -27,24 +27,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\sushiapplication\impl\application.cpp" />
+    <ClInclude Include="..\sushiwindow\window.hpp" />
+    <ClInclude Include="..\sushiwindow\windowDriver.hpp" />
+    <ClInclude Include="..\sushiwindow\windowLogic.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\sushiapplication\application.hpp" />
-    <ClInclude Include="..\sushiapplication\applicationDriver.hpp" />
+    <ClCompile Include="..\sushiwindow\impl\window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\sushicore\sushicorewin32\sushicore.vcxproj">
       <Project>{f82c54a2-a3b7-44dc-a487-7ae692df4096}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\..\sushiwindow\sushiwindowwin32\sushiwindow.vcxproj">
-      <Project>{681b78cb-89cd-48ae-93ce-3dbc898f6c4c}</Project>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{5066207e-ff62-4694-b6c4-a909752b5a2e}</ProjectGuid>
+    <ProjectGuid>{681b78cb-89cd-48ae-93ce-3dbc898f6c4c}</ProjectGuid>
     <Keyword>StaticLibrary</Keyword>
-    <RootNamespace>sushiapplication</RootNamespace>
+    <RootNamespace>sushiwindow</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
@@ -114,35 +112,35 @@
   <PropertyGroup />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>..\..\_dep;..\..\sushicore;..\..\sushiwindow;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\_dep;..\..\sushicore;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>..\..\_dep;..\..\sushicore;..\..\sushiwindow;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\_dep;..\..\sushicore;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>..\..\_dep;..\..\sushicore;..\..\sushiwindow;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\_dep;..\..\sushicore;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>..\..\_dep;..\..\sushicore;..\..\sushiwindow;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\_dep;..\..\sushicore;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>..\..\_dep;..\..\sushicore;..\..\sushiwindow;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\_dep;..\..\sushicore;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>..\..\_dep;..\..\sushicore;..\..\sushiwindow;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\_dep;..\..\sushicore;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
       <SDLCheck>true</SDLCheck>
-      <PrecompiledHeaderFile />
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeaderFile />
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,8 +153,8 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
       <SDLCheck>true</SDLCheck>
-      <PrecompiledHeaderFile />
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeaderFile />
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -169,8 +167,8 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
       <SDLCheck>true</SDLCheck>
-      <PrecompiledHeaderFile />
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeaderFile />
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -183,8 +181,8 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
       <SDLCheck>true</SDLCheck>
-      <PrecompiledHeaderFile />
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeaderFile />
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -197,8 +195,8 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
       <SDLCheck>true</SDLCheck>
-      <PrecompiledHeaderFile />
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeaderFile />
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -211,8 +209,8 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <CompileAsWinRT>false</CompileAsWinRT>
       <SDLCheck>true</SDLCheck>
-      <PrecompiledHeaderFile />
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeaderFile />
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

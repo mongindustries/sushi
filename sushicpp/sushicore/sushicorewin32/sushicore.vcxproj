@@ -31,8 +31,10 @@
     <ClCompile Include="..\sushicore\impl\Rectangle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\sushicore\CoreObject.h" />
     <ClInclude Include="..\sushicore\FastFail.h" />
     <ClInclude Include="..\sushicore\Matrix.h" />
+    <ClInclude Include="..\sushicore\PointerOwnership.h" />
     <ClInclude Include="..\sushicore\Rectangle.h" />
     <ClInclude Include="..\sushicore\Vector.h" />
   </ItemGroup>
