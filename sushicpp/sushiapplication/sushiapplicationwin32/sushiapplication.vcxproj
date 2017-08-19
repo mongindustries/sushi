@@ -27,11 +27,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\sushiapplication\impl\window.cpp" />
+    <ClCompile Include="..\sushiapplication\impl\application.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\sushiapplication\window.hpp" />
-    <ClInclude Include="..\sushiapplication\windowDriver.hpp" />
+    <ClInclude Include="..\sushiapplication\application.hpp" />
+    <ClInclude Include="..\sushiapplication\applicationDriver.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5066207e-ff62-4694-b6c4-a909752b5a2e}</ProjectGuid>

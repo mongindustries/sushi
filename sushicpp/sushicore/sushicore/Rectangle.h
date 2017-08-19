@@ -9,6 +9,8 @@
 #include "Vector.h"
 #include <glm/detail/type_float.hpp>
 
+namespace sushi::core {
+
 struct Rectangle {
 
     glm::vec2           location;
@@ -52,4 +54,5 @@ inline RectangleEdge    make_rectangle  (const glm::float32 l,
             rectangle.bottom    = b;
 
     return  rectangle;
+}
 }
