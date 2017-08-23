@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:appTestMacOS/appTestMacOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:appTestIOS/appTestIOS.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "sushi-ios">
+      <FileRef
+         location = "group:/Users/rantingmong/Desktop/Code/sushi/sushicpp/sushiapplication/sushiapplicationios/sushiapplicationios.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/rantingmong/Desktop/Code/Sushi/sushicpp/sushicore/sushicoreios/sushicoreios.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/rantingmong/Desktop/Code/sushi/sushicpp/sushigraphics/sushigraphicsios/sushigraphicsios.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/rantingmong/Desktop/Code/sushi/sushicpp/sushiwindow/sushiwindowios/sushiwindowios.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "sushi-macos">
+      <FileRef
+         location = "group:sushiapplication/sushiapplicationmacos/sushiapplicationmacos.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:sushicore/sushicoremacos/sushicoremacos.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:sushigraphics/sushigraphicsmacos/sushigraphicsmacos.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:sushiwindow/sushiwindowmacos/sushiwindowmacos.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>

@@ -8,21 +8,24 @@
 namespace sushi::window {
 
     class Window;
+
+    class WindowEncapsulatedMessage;
 }
 
 namespace sushi::drivers {
     
-    class WindowDriverDelegate {
+    class WindowDriverDelegate { // OS > sushi
 
     public:
 
         virtual ~WindowDriverDelegate               () = default;
 
 
-        virtual void            send                (window::WindowDriverMessages message, SUSHI_PT_TRANSFER void* data) = 0;
+        virtual void            send                (window::WindowDriverMessages message,
+                                                     SUSHI_PT_REF window::WindowEncapsulatedMessage* data) = 0;
     };
 
-    class WindowDriver {
+    class WindowDriver { // sushi > OS
         
         friend class window::Window;
 
@@ -36,18 +39,20 @@ namespace sushi::drivers {
         virtual ~WindowDriver   ()                  = default;
 
 
-        SUSHI_PO_WEAK
+        SUSHI_PT_REF
         const window::Window*   getDelegate         () const { return delegate; }
 
 
         virtual core::Rectangle getUndefinedRect    () const = 0;
 
 
+        SUSHI_PT_TRANSFER
         virtual void*           initalise           () = 0;
 
         virtual void            destroy             () = 0;
 
 
-        virtual void            process             (window::WindowDriverMessages message, SUSHI_PT_TRANSFER void* data) = 0;
+        virtual void            process             (window::WindowDriverMessages message,
+                                                     SUSHI_PT_REF window::WindowEncapsulatedMessage* data) = 0;
     };
 }

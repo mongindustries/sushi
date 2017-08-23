@@ -2,7 +2,7 @@
 
 namespace sushi::window {
     
-    enum WindowDriverMessages: int {
+    enum class WindowDriverMessages: int {
     
         sizeChanged = 0,
         titleChanged,

@@ -17,12 +17,13 @@ namespace sushi::window {
 
     public:
 
-        SUSHI_PO_WEAK
+        SUSHI_PT_REF
         const Window*   getWindow       () const { return window; }
 
 
-        virtual void    initialise      (void* fromSavedState) = 0;
+        virtual void    initialise      (SUSHI_PT_REF void* fromSavedState) = 0;
 
+        SUSHI_PT_TRANSFER
         virtual void*   destroy         (bool permanentally) = 0;
 
 

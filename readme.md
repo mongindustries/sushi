@@ -21,6 +21,6 @@ I'll be focusing first on building a skeleton API for application, window, graph
 
 ### Features?
 
-- 🐦 built using *the* latest Swift programming language
+- 🐦 built using *the* latest Swift/C++ programming language spec (still deliberating over if I should use C++ or Swift)
 - 🛩 no-nonsense API, like the interior of a Subaru car
 - 🍱 modular and cross-platform friendly: API consists of **drivers** that interacts with the OS and the actual api itself

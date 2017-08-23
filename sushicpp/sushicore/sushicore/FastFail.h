@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <string>
 #include <exception>
 
 namespace sushi::core {
@@ -24,18 +25,16 @@ namespace sushi::core {
         /**
          *
          * Method to call to crash the application.
-         * 
-         * Parameters:
-         *      error - The error type.
+         *
+         * @param error The error type.
          */
-        void                crash       (const std::exception error) const;
+        [[noreturn]] void   crash       (const std::exception error) const;
 
         /**
          *
          * Method to call a non-fatal error.
-         * 
-         * Parameters:
-         *      error - The error type.
+         *
+         * @param error The error type.
          */
         void                nonFatal    (const std::exception error) const;
 
@@ -53,12 +52,21 @@ namespace sushi::core {
     namespace failureTypes {
 
         /// A method is not implemented properly.
-        struct unimplemented:       std::exception { char const* what() const override; };
+        struct unimplemented:       public std::runtime_error {
+
+            explicit unimplemented(const std::string& what, const std::string& fileName = __FILE__, const int& lineNumber = __LINE__);
+        };
 
         /// A conversion from an opaque type to a reference type failed.
-        struct unexpectedPayload:   std::exception { char const* what() const override; };
+        struct unexpectedPayload:   public std::runtime_error {
+
+            explicit unexpectedPayload(const std::string& what, const std::string& fileName = __FILE__, const int& lineNumber = __LINE__);
+        };
 
         /// Driver was not specified properly for the platform.
-        struct driverNotInstalled:  std::exception { char const* what() const override; };
+        struct driverNotInstalled:  public std::runtime_error {
+
+            explicit driverNotInstalled(const std::string& what, const std::string& fileName = __FILE__, const int& lineNumber = __LINE__);
+        };
     }
 }

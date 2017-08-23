@@ -5,5 +5,3 @@
 // Author: Michael Ong
 
 #include "../Rectangle.h"
-
-#include <filesystem>

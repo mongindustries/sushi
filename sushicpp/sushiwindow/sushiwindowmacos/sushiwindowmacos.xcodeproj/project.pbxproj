@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		603A8AF41F4DBC7F00601A84 /* window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 603A8AEE1F4DBC7F00601A84 /* window.cpp */; };
+		603A8AF51F4DBC7F00601A84 /* windowDriverMessages.h in Headers */ = {isa = PBXBuildFile; fileRef = 603A8AEF1F4DBC7F00601A84 /* windowDriverMessages.h */; };
+		603A8AF61F4DBC7F00601A84 /* window.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 603A8AF01F4DBC7F00601A84 /* window.hpp */; };
+		603A8AF71F4DBC7F00601A84 /* windowLogic.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 603A8AF11F4DBC7F00601A84 /* windowLogic.hpp */; };
+		603A8AF81F4DBC7F00601A84 /* windowStates.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 603A8AF21F4DBC7F00601A84 /* windowStates.hpp */; };
+		603A8AF91F4DBC7F00601A84 /* windowDriver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 603A8AF31F4DBC7F00601A84 /* windowDriver.hpp */; };
+		6040E1A61F4DBFB200909DC2 /* macosWindowDriver.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6040E1A41F4DBFB200909DC2 /* macosWindowDriver.mm */; };
+		6040E1A71F4DBFB200909DC2 /* macosWindowDriver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6040E1A51F4DBFB200909DC2 /* macosWindowDriver.hpp */; };
+		6067D0551F4DD41D0099C9EB /* windowEncapsulationIDs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6067D0531F4DD41D0099C9EB /* windowEncapsulationIDs.cpp */; };
+		60EF477A1F4DC74F00AC7F4C /* macosWindowDriverView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 60EF47781F4DC74F00AC7F4C /* macosWindowDriverView.mm */; };
+		60EF477B1F4DC74F00AC7F4C /* macosWindowDriverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 60EF47791F4DC74F00AC7F4C /* macosWindowDriverView.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		603A8AEE1F4DBC7F00601A84 /* window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = window.cpp; sourceTree = "<group>"; };
+		603A8AEF1F4DBC7F00601A84 /* windowDriverMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = windowDriverMessages.h; sourceTree = "<group>"; };
+		603A8AF01F4DBC7F00601A84 /* window.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = window.hpp; sourceTree = "<group>"; };
+		603A8AF11F4DBC7F00601A84 /* windowLogic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = windowLogic.hpp; sourceTree = "<group>"; };
+		603A8AF21F4DBC7F00601A84 /* windowStates.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = windowStates.hpp; sourceTree = "<group>"; };
+		603A8AF31F4DBC7F00601A84 /* windowDriver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = windowDriver.hpp; sourceTree = "<group>"; };
+		6040E1A41F4DBFB200909DC2 /* macosWindowDriver.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = macosWindowDriver.mm; sourceTree = "<group>"; };
+		6040E1A51F4DBFB200909DC2 /* macosWindowDriver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = macosWindowDriver.hpp; sourceTree = "<group>"; };
+		6067D0521F4DD3990099C9EB /* windowEncapsulationIDs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = windowEncapsulationIDs.hpp; sourceTree = "<group>"; };
+		6067D0531F4DD41D0099C9EB /* windowEncapsulationIDs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = windowEncapsulationIDs.cpp; sourceTree = "<group>"; };
+		60D096361F4DBB9D00346BDC /* libsushiwindowmacos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsushiwindowmacos.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		60EF47781F4DC74F00AC7F4C /* macosWindowDriverView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = macosWindowDriverView.mm; sourceTree = "<group>"; };
+		60EF47791F4DC74F00AC7F4C /* macosWindowDriverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macosWindowDriverView.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60D096331F4DBB9D00346BDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		603A8AEC1F4DBC7F00601A84 /* sushiwindow */ = {
+			isa = PBXGroup;
+			children = (
+				603A8AED1F4DBC7F00601A84 /* impl */,
+				603A8AEF1F4DBC7F00601A84 /* windowDriverMessages.h */,
+				603A8AF01F4DBC7F00601A84 /* window.hpp */,
+				603A8AF11F4DBC7F00601A84 /* windowLogic.hpp */,
+				603A8AF21F4DBC7F00601A84 /* windowStates.hpp */,
+				603A8AF31F4DBC7F00601A84 /* windowDriver.hpp */,
+				6067D0521F4DD3990099C9EB /* windowEncapsulationIDs.hpp */,
+			);
+			name = sushiwindow;
+			path = ../sushiwindow;
+			sourceTree = "<group>";
+		};
+		603A8AED1F4DBC7F00601A84 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				603A8AEE1F4DBC7F00601A84 /* window.cpp */,
+				6067D0531F4DD41D0099C9EB /* windowEncapsulationIDs.cpp */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		6040E1A31F4DBF8E00909DC2 /* driver */ = {
+			isa = PBXGroup;
+			children = (
+				6040E1A51F4DBFB200909DC2 /* macosWindowDriver.hpp */,
+				6040E1A41F4DBFB200909DC2 /* macosWindowDriver.mm */,
+				60EF47791F4DC74F00AC7F4C /* macosWindowDriverView.h */,
+				60EF47781F4DC74F00AC7F4C /* macosWindowDriverView.mm */,
+			);
+			path = driver;
+			sourceTree = "<group>";
+		};
+		6071A2D91F4DBB0F00D49983 = {
+			isa = PBXGroup;
+			children = (
+				6040E1A31F4DBF8E00909DC2 /* driver */,
+				603A8AEC1F4DBC7F00601A84 /* sushiwindow */,
+				6071A2E31F4DBB0F00D49983 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6071A2E31F4DBB0F00D49983 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60D096361F4DBB9D00346BDC /* libsushiwindowmacos.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		60D096341F4DBB9D00346BDC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603A8AF61F4DBC7F00601A84 /* window.hpp in Headers */,
+				603A8AF71F4DBC7F00601A84 /* windowLogic.hpp in Headers */,
+				6040E1A71F4DBFB200909DC2 /* macosWindowDriver.hpp in Headers */,
+				603A8AF81F4DBC7F00601A84 /* windowStates.hpp in Headers */,
+				603A8AF51F4DBC7F00601A84 /* windowDriverMessages.h in Headers */,
+				603A8AF91F4DBC7F00601A84 /* windowDriver.hpp in Headers */,
+				60EF477B1F4DC74F00AC7F4C /* macosWindowDriverView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		60D096351F4DBB9D00346BDC /* sushiwindowmacos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60D0963E1F4DBB9D00346BDC /* Build configuration list for PBXNativeTarget "sushiwindowmacos" */;
+			buildPhases = (
+				60D096321F4DBB9D00346BDC /* Sources */,
+				60D096331F4DBB9D00346BDC /* Frameworks */,
+				60D096341F4DBB9D00346BDC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sushiwindowmacos;
+			productName = sushiwindowmacos;
+			productReference = 60D096361F4DBB9D00346BDC /* libsushiwindowmacos.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6071A2DA1F4DBB0F00D49983 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Michael Ong";
+				TargetAttributes = {
+					60D096351F4DBB9D00346BDC = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6071A2DD1F4DBB0F00D49983 /* Build configuration list for PBXProject "sushiwindowmacos" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6071A2D91F4DBB0F00D49983;
+			productRefGroup = 6071A2E31F4DBB0F00D49983 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60D096351F4DBB9D00346BDC /* sushiwindowmacos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60D096321F4DBB9D00346BDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603A8AF41F4DBC7F00601A84 /* window.cpp in Sources */,
+				6067D0551F4DD41D0099C9EB /* windowEncapsulationIDs.cpp in Sources */,
+				60EF477A1F4DC74F00AC7F4C /* macosWindowDriverView.mm in Sources */,
+				6040E1A61F4DBFB200909DC2 /* macosWindowDriver.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6071A2E91F4DBB0F00D49983 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../sushigraphics,
+					../../sushiapplication,
+					../../sushicore,
+					../../_deps,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6071A2EA1F4DBB0F00D49983 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../sushigraphics,
+					../../sushiapplication,
+					../../sushicore,
+					../../_deps,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60D0963F1F4DBB9D00346BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				DEVELOPMENT_TEAM = FV49BGP2TT;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		60D096401F4DBB9D00346BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				DEVELOPMENT_TEAM = FV49BGP2TT;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6071A2DD1F4DBB0F00D49983 /* Build configuration list for PBXProject "sushiwindowmacos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6071A2E91F4DBB0F00D49983 /* Debug */,
+				6071A2EA1F4DBB0F00D49983 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60D0963E1F4DBB9D00346BDC /* Build configuration list for PBXNativeTarget "sushiwindowmacos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60D0963F1F4DBB9D00346BDC /* Debug */,
+				60D096401F4DBB9D00346BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6071A2DA1F4DBB0F00D49983 /* Project object */;
+}

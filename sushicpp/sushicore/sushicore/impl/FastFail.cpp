@@ -18,7 +18,6 @@ FastFail*   FastFail::instance          = instance = new FastFail();
 
 FastFail::FastFail                      () {
 
-    instance = new FastFail();
 }
 
 FastFail::~FastFail                     () {
@@ -28,33 +27,40 @@ FastFail::~FastFail                     () {
 // ReSharper disable once CppMemberFunctionMayBeStatic
 void        FastFail::crash             (const exception error) const {
 
-    cerr    << "Program Crashed with exception "
+    cerr    << "💥 Program Crashed with exception "
             << error.what()
             << endl;
+
+    abort();
 }
 
 // ReSharper disable once CppMemberFunctionMayBeStatic
 void        FastFail::nonFatal          (const exception error) const {
 
-    cerr    << "Program non-fatal error with exception "
+    cerr    << "💥 Program non-fatal error with exception "
             << error.what()
             << endl;
 }
 
-
 using namespace failureTypes;
 
-char const* unimplemented::what         () const {
 
-    return ("Unimplemented functionality: "     + string(exception::what())).c_str();
+
+driverNotInstalled::driverNotInstalled(const string &what, const string &fileName, const int &lineNumber):
+
+    runtime_error("DRIVER_NOT_INSTALLED: " + fileName + "-" + to_string(lineNumber) + ": " + what ) {
+
 }
 
-char const* unexpectedPayload::what     () const {
 
-    return ("Unexpected payload delivered: "    + string(exception::what())).c_str();
+unexpectedPayload::unexpectedPayload(const string &what, const string &fileName, const int &lineNumber):
+
+    runtime_error("UNEXPECTED_PAYLOAD: " + fileName + "-" + to_string(lineNumber) + ": " + what ) {
+
 }
 
-char const* driverNotInstalled::what    () const {
+unimplemented::unimplemented(const string &what, const string &fileName, const int &lineNumber):
 
-    return ("Driver not installed: "            + string(exception::what())).c_str();
+    runtime_error("UNIMPLEMENTED: " +  fileName + "-" + to_string(lineNumber) + ": " + what ) {
+
 }

@@ -14,79 +14,103 @@
 #include <sushicore/CoreObject.h>
 #include <sushicore/PointerOwnership.h>
 
-#include <sushiwindow/window.hpp>
-#include <sushiwindow/windowLogic.hpp>
+namespace sushi::window {
 
-#include "applicationDriver.hpp"
+    class Window;
+    class WindowLogic;
+}
+
+namespace sushi::graphics {
+
+    class GraphicsDevice;
+}
+
+namespace sushi::drivers {
+
+    class ApplicationDriver;
+}
 
 namespace sushi::application {
 
     /**
 
-    `Application` class
+     \brief `Application` class
 
-    Object that initialises Sushi.
+     Object that initialises Sushi.
 
-        - This object should be only initialised once. Usually at `main.swift` file.
-
-        - Use `initialise` to initialise the application.
-
-        - Use `Application::instance` to get the necessary properties such as the `driver`, `graphicsDevice`, and `storageManager`.
-
-        - Use `spawnWindow()` to create a window. **DO NOT INITIALISE BY CREATING A WINDOW INSTANCE**
+     This object should be only initialised once. Usually at `main.cpp` file.
+     Use `initialise` to initialise the application.
+     Use `Application::instance` to get the necessary properties such as the `driver`, `graphicsDevice`, and `storageManager`.
+     Use `spawnWindow()` to create a window. **DO NOT INITIALISE BY CREATING A WINDOW INSTANCE**
     */
     class Application final: public core::CoreObject {
-    
+
+        friend class drivers::ApplicationDriver;
+
     public:
 
-        typedef std::function<void(void)>   initialiseCallback;
+        typedef std::function<void(Application const*)> initialiseCallback;
 
 
         SUSHI_PO_STRONG
         static Application*                 instance;
 
 
-        static void                         initialise          (SUSHI_PT_TRANSFER drivers::applicationDriver* platformDriver,
+        /**
+
+         Method to initalise sushi
+
+         */
+        static void                         initialise          (SUSHI_PT_TRANSFER drivers::ApplicationDriver* platformDriver,
                                                                  const initialiseCallback& initCallback);
 
         static void                         destroy             ();
 
     private:
 
-        drivers::applicationDriver*         platformDriver;
+        SUSHI_PO_STRONG
+        drivers::ApplicationDriver*         platformDriver;
 
 
-        void*                               graphicsDevice;
+        SUSHI_PO_STRONG
+        graphics::GraphicsDevice*           graphicsDevice;
 
+        SUSHI_PO_STRONG
         void*                               storageManager;
 
 
         initialiseCallback                  initialisationCallback;
 
 
-        SUSHI_PO_WEAK
+        SUSHI_PO_WEAK mutable
         std::vector<window::Window*>        trackedWindows;
 
 
     public:
 
-        explicit Application                                    (SUSHI_PT_TRANSFER drivers::applicationDriver* platformDriver);
+        explicit Application                                    (SUSHI_PT_TRANSFER drivers::ApplicationDriver* platformDriver);
 
         ~Application                                            ();
 
+        SUSHI_PT_REF
+        const drivers::ApplicationDriver*   getPlatformDriver   () const;
 
-        const drivers::applicationDriver*   getPlatformDriver   () const;
+        SUSHI_PT_REF
+        const graphics::GraphicsDevice*     getGraphicsDevice   () const;
 
-        const void*                         getGraphicsDevice   () const;
-
+        SUSHI_PT_REF
         const void*                         getStorageManager   () const;
 
 
         const std::vector<window::Window*>& getTrackedWindows   () const;
 
+
+        const initialiseCallback&           getInitCallback     () const;
+
     public:
 
-        SUSHI_PO_STRONG window::Window*     spawnWindow         (window::WindowLogic* logic,
+        SUSHI_PO_STRONG
+        window::Window*                     spawnWindow         (SUSHI_PT_TRANSFER window::WindowLogic* logic,
                                                                  const std::u16string& title,
                                                                  const core::Rectangle& location) const;
     };
