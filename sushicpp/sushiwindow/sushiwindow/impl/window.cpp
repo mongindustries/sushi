@@ -178,9 +178,9 @@ void        Window::send               (WindowDriverMessages message, WindowEnca
         }   break;
         case WindowDriverMessages::titleChanged:
 
-            if (sizeof(data) == sizeof(u16string)) {
+            if (data->dataID == WindowEncapsulationIDs::valueString) {
 
-                _title = u16string(*reinterpret_cast<u16string*>(data));
+                _title = u16string(*reinterpret_cast<u16string*>(data->data));
 
             } else {
 
@@ -190,9 +190,9 @@ void        Window::send               (WindowDriverMessages message, WindowEnca
             break;
         case WindowDriverMessages::stateChanged:
 
-            if (sizeof(data) == sizeof(set<WindowStates>)) {
+            if (data->dataID == WindowEncapsulationIDs::valueSet) {
 
-                _windowState = set<WindowStates>(*reinterpret_cast<set<WindowStates>*>(data));
+                _windowState = set<WindowStates>(*reinterpret_cast<set<WindowStates>*>(data->data));
 
             } else {
 

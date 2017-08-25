@@ -18,10 +18,11 @@ GraphicsSurface::~GraphicsSurface() {
 
 void    GraphicsSurface::resize         (const glm::vec2 &newSize, const float &newDpi) {
 
-    graphicsDriver->resizeGraphicsSurface(this, newSize, newDpi);
+    if (backingSize != newSize) {
+
+        backingSize = newSize;
+
+        graphicsDriver->resizeGraphicsSurface(this, newSize, newDpi);
+    }
 }
 
-void    GraphicsSurface::setBackingSize (const glm::vec2 &value) {
-
-    backingSize = value;
-}

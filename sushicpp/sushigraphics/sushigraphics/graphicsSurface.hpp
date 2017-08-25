@@ -52,9 +52,6 @@ namespace sushi::graphics {
         const glm::vec2&            getBackingSize      () const { return backingSize; }
 
 
-        void                        setBackingSize      (const glm::vec2& value);
-
-
         void                        resize              (const glm::vec2& newSize, const float& newDpi);
     };
 }

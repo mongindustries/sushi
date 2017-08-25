@@ -16,5 +16,9 @@ namespace sushi::window {
         static unsigned int valueFloat;
 
         static unsigned int valueRectangle;
+
+        static unsigned int valueString;
+
+        static unsigned int valueSet;
     };
 }

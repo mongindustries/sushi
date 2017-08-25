@@ -40,12 +40,15 @@ void    windowLogic::initialise     (void *fromSavedState) {
     renderPass.colorAttachments[0].loadAction   = MTLLoadActionClear;
     renderPass.colorAttachments[0].storeAction  = MTLStoreActionStore;
 
-    renderPass.colorAttachments[0].clearColor   = MTLClearColorMake(1, 0, 0, 1);
+    renderPass.colorAttachments[0].clearColor   = MTLClearColorMake(0.95, 0.95, 0.95, 1);
 
     [[commandBuffer renderCommandEncoderWithDescriptor:renderPass] endEncoding];
 
+    [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer> _Nonnull) {
+
+        [drawable present];
+    }];
     [commandBuffer commit];
-    [drawable present];
 }
 
 void* 	windowLogic::destroy        (bool permanentally) {

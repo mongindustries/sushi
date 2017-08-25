@@ -27,8 +27,15 @@ macosGraphicsDriver::macosGraphicsDriver                        ():
 
 mtlDevice(nil) {
 
-    const auto device   = MTLCreateSystemDefaultDevice();
-    mtlDevice           = (__bridge_retained void*) device;
+    for (id<MTLDevice> device in MTLCopyAllDevices()) {
+
+        if (device.isLowPower == YES) {
+
+            mtlDevice = (__bridge_retained void*) device;
+
+            break;
+        }
+    }
 }
 
 macosGraphicsDriver::~macosGraphicsDriver                       () {
@@ -73,15 +80,14 @@ void                macosGraphicsDriver::resizeGraphicsSurface  (GraphicsSurface
                                                                  const glm::vec2 &newSize,
                                                                  const float &newDpi) const {
 
-    auto caMetalLayer   = (__bridge CAMetalLayer*) surface->getBackingSurface();
+    auto caMetalLayer = (__bridge CAMetalLayer*) surface->getBackingSurface();
     if  (caMetalLayer == nil) {
         FastFail::instance->crash(failureTypes::unexpectedPayload("This is not a CAMetalLayer instance!"));
     }
 
-    auto scale          = (float) [NSScreen mainScreen].backingScaleFactor;
+    auto scale = (float) [NSScreen mainScreen].backingScaleFactor;
 
     caMetalLayer.drawableSize = CGSizeMake(newSize.x * scale, newSize.y * scale);
-    surface->setBackingSize(newSize * scale);
 }
 
 void                macosGraphicsDriver::destroyBackingSurface  (void *backingSurface) {

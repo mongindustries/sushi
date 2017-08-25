@@ -35,11 +35,39 @@ using namespace sushi::window;
     }
 }
 
+- (void)windowWillMove:(NSNotification *)notification {
+
+    const auto window   = (NSWindow*) notification.object;
+
+    auto    windowFrame = NSRectToCGRect(window.frame);
+
+    auto    windowRef   = (Window*) _windowRef;
+
+    auto    newSize     = new Rectangle {   glm::vec2 { CGRectGetMinX(windowFrame), CGRectGetMinY(windowFrame) },
+                                            glm::vec2 { CGRectGetWidth(windowFrame), CGRectGetHeight(windowFrame)} };
+    auto    data        = Window::encapsulate(WindowEncapsulationIDs::valueRectangle, newSize);
+
+    windowRef->send(WindowDriverMessages::sizeChanged, data);
+
+    delete  newSize;
+    delete  data;
+}
+
+- (void)windowWillMiniaturize:(NSNotification *)notification {
+
+
+}
+
+- (void)windowDidDeminiaturize:(NSNotification *)notification {
+
+
+}
+
 - (NSSize)windowWillResize:(NSWindow *)sender toSize:(NSSize)frameSize {
 
-    auto window = (Window*) _windowRef;
+    auto    window  = (Window*) _windowRef;
 
-    auto    newSize = new Rectangle { glm::vec2 { 0, 0 }, glm::vec2 { frameSize.width, frameSize.height } };
+    auto    newSize = new Rectangle { window->getLocation().location, glm::vec2 { frameSize.width, frameSize.height } };
     auto    data    = Window::encapsulate(WindowEncapsulationIDs::valueRectangle, newSize);
 
     window->send(WindowDriverMessages::sizeChanged, data);
